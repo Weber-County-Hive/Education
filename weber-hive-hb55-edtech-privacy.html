@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What 100 Apps Actually Send — Education — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f1e6; --paper-line:#e4ddc9;
+    --chalk:#24372c; --chalk-soft:#3a4f42;
+    --brass:#b8933f; --rust:#a13f2b;
+    --ink:#2a2a24; --ink-soft:#5c5a4e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
+  a{color:var(--rust);}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:20px 24px 0;font-size:13px;font-family:"IBM Plex Mono",monospace;color:var(--ink-soft);}
+  .breadcrumb a{color:var(--ink-soft);border-bottom:1px solid var(--paper-line);text-decoration:none;}
+
+  header.band{background:var(--chalk);color:var(--paper);padding:32px 24px 40px;margin-top:16px;}
+  .band-inner{max-width:760px;margin:0 auto;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--brass);}
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);margin:12px 0 14px;letter-spacing:-0.01em;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#c8d0c9;margin-top:8px;}
+
+  main{max-width:760px;margin:0 auto;padding:36px 24px 24px;}
+
+  .glossary{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px;}
+  .flip-card{
+    flex:1 1 150px;height:150px;perspective:1000px;cursor:pointer;
+  }
+  .flip-card-inner{
+    position:relative;width:100%;height:100%;text-align:left;
+    transition:transform 0.5s;transform-style:preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner{transform:rotateY(180deg);}
+  .flip-card-front,.flip-card-back{
+    position:absolute;width:100%;height:100%;backface-visibility:hidden;
+    border:1px solid var(--paper-line);padding:18px 18px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .flip-card-front{background:#fff;}
+  .flip-card-front .term{
+    font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--chalk-soft);
+  }
+  .flip-card-front .tap-hint{font-size:12px;color:#a6a294;margin-top:8px;}
+  .flip-card-back{
+    background:var(--chalk);color:var(--paper);transform:rotateY(180deg);
+  }
+  .flip-card-back .def{font-size:13.5px;line-height:1.5;}
+
+  .newhere{background:#fff;border:1px solid var(--paper-line);border-left:4px solid var(--brass);padding:18px 20px;margin-bottom:36px;font-size:15px;}
+  .newhere p{margin:0 0 8px;}
+  .newhere p:last-child{margin-bottom:0;}
+
+  h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:40px 0 14px;color:var(--chalk);}
+  p{font-size:15.5px;margin:0 0 14px;}
+  ul{margin:0 0 14px;padding-left:20px;}
+  li{font-size:15.5px;margin-bottom:6px;}
+
+  .stat-strip{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0 30px;}
+  .stat-cell{background:#fff;border:1px solid var(--paper-line);padding:14px 16px;flex:1 1 150px;}
+  .stat-cell .num{font-family:"IBM Plex Mono",monospace;font-size:20px;color:var(--rust);display:block;}
+  .stat-cell .label{font-size:12.5px;color:var(--ink-soft);}
+
+  .callout{background:#fff;border:1px solid var(--paper-line);border-left:4px solid var(--rust);padding:16px 18px;margin:18px 0;font-size:15px;}
+  .callout-note{border-left-color:var(--brass);}
+
+  table.district-apps{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--paper-line);margin:14px 0 20px;}
+  table.district-apps th{
+    text-align:left;font-size:12.5px;color:var(--ink-soft);font-family:"Inter",sans-serif;font-weight:600;
+    padding:10px 14px;border-bottom:1px solid var(--paper-line);
+  }
+  table.district-apps td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--paper-line);}
+  table.district-apps tr:last-child td{border-bottom:none;}
+  table.district-apps td.num{font-family:"IBM Plex Mono",monospace;}
+
+  details.sources{background:#fff;border:1px solid var(--paper-line);padding:14px 18px;margin-top:36px;}
+  details.sources summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--chalk-soft);}
+  details.sources ol{margin-top:12px;padding-left:20px;}
+  details.sources li{font-size:13.5px;margin-bottom:8px;color:var(--ink-soft);}
+
+  footer{max-width:760px;margin:40px auto 0;padding:20px 24px 50px;font-size:13px;color:var(--ink-soft);border-top:1px solid var(--paper-line);}
+</style>
+</head>
+<body>
+
+<div class="breadcrumb"><a href="index.html">← Education docket</a></div>
+
+<header class="band">
+  <div class="band-inner">
+    <div class="eyebrow">Case file — Utah EdTech app data privacy</div>
+    <h1>What 100 Apps Actually Send</h1>
+    <div class="meta-row">
+      <span>Report dated: August 20, 2025</span>
+      <span>Public coverage: August 2026</span>
+      <span>HB 55 effective: July 1, 2026</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="glossary">
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of DPA">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><span class="term">DPA</span><span class="tap-hint">Tap to define</span></div>
+        <div class="flip-card-back"><span class="def">Data Processing Agreement — the contract that sets the rules for how a vendor is allowed to collect, use, store, and delete student data.</span></div>
+      </div>
+    </div>
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of ISL">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><span class="term">ISL</span><span class="tap-hint">Tap to define</span></div>
+        <div class="flip-card-back"><span class="def">Internet Safety Labs — the San Diego research group that ran the actual network-traffic testing behind this report.</span></div>
+      </div>
+    </div>
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of SDPC">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><span class="term">SDPC</span><span class="tap-hint">Tap to define</span></div>
+        <div class="flip-card-back"><span class="def">Student Data Privacy Consortium — the national registry where signed data privacy agreements between districts and vendors are filed.</span></div>
+      </div>
+    </div>
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of UUID">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><span class="term">UUID</span><span class="tap-hint">Tap to define</span></div>
+        <div class="flip-card-back"><span class="def">A persistent code that identifies a specific device or user, letting advertisers track someone across apps even without a name attached.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="newhere">
+    <p><strong>New here?</strong> In 2023-25, researchers at BYU and Internet Safety Labs tested 100 EdTech apps used in Utah classrooms, capturing what each one actually sent over the network — not what its contract said it would send. The report sat largely unnoticed for a year until it became the basis for H.B. 55, which took effect July 1, 2026.</p>
+    <p>This case file covers what the testing found, the law that followed, and how it connects to the broader student-data-privacy picture, including the separate Google Gemini/Tooele story.</p>
+  </div>
+
+  <div class="stat-strip">
+    <div class="stat-cell"><span class="num">52%</span><span class="label">Apps with a signed DPA that collected data they weren't contractually permitted to collect</span></div>
+    <div class="stat-cell"><span class="num">61%</span><span class="label">Apps that share data with third parties</span></div>
+    <div class="stat-cell"><span class="num">3</span><span class="label">Data elements the average DPA specifies, out of 79 possible</span></div>
+  </div>
+
+  <h2>The study</h2>
+  <p>"Utah EdTech App Data Collection and Sharing: 2023-25 Investigation" was a joint project between the Utah State Board of Education (USBE) and researchers Mark Keith and Justin Giboney at BYU, working with Lisa LeVasseur and Bryce Simpson at Internet Safety Labs. USBE itself funded the work.</p>
+  <p>Researchers identified more than 3,000 unique EdTech apps in use statewide, then selected 100 for deep testing based on usage frequency, authentication requirements, and contract status. They created test accounts mimicking students under 13, used each app for 15-20 minutes, and captured all outgoing network traffic — comparing what left the app against the 79 student data elements Utah's own contract template allows vendors to collect.</p>
+
+  <h2>What they found</h2>
+  <ul>
+    <li>52% of apps with a signed DPA (44 of 85) collected at least one data element they weren't contractually permitted to collect.</li>
+    <li>61% of tested apps share data with third parties; 36% share specifically with advertisers.</li>
+    <li>Three unnamed apps — anonymized in the report as "005," "041," and "026" — shared data with 32, 33, and 54 advertisers respectively. USBE's policy lets vendors who "respond adequately" to inquiry have their names redacted, meaning the worst-sharing but cooperative vendors stay anonymous; only Loom (owned by Atlassian) was named specifically, for not cooperating.</li>
+    <li>The most commonly shared data element with advertisers is a UUID — a persistent tracking identifier. The state's own contract form has no checkbox for vendors to disclose UUID sharing, so most never did.</li>
+    <li>CoolMathGames.com was separately found running location-based behavioral advertising on a kids' site, ignored a private disclosure from researchers for months, and only fixed it after public exposure.</li>
+  </ul>
+
+  <div class="callout callout-note">
+    <strong>Vendor follow-up (Aug 2026 coverage).</strong> Several vendors, when confronted, said ad-tracking code present on their general commercial site was absent from the logged-in student version. Seven vendors clarified their DPAs applied only to paid tiers — students on free versions had no contractual privacy protection despite districts believing a DPA was in force.
+  </div>
+
+  <h2>H.B. 55 — the resulting law</h2>
+  <p>Rep. Tiara Auxier (R-Morgan) is the primary sponsor of H.B. 55, "Privacy Compliance for Education Technology Vendors," effective July 1, 2026. It mandates stricter privacy terms, audits, and contract termination for vendor non-compliance, and amended §53E-9-309(2)(a) — the same statute already flagged in the Gemini/Tooele DPA case file.</p>
+
+  <h2>The loophole underneath both stories</h2>
+  <p>Utah's implementing rule, R277-487-7(5), lets vendors satisfy the audit requirement through self-assessment, a district questionnaire, or a SOC2/SOC3 report — a true onsite audit only happens if the vendor agrees to it. That's a structural gap independent of any single vendor, and it applies equally to the hundreds of EdTech apps in this study and to Google's own Gemini contract.</p>
+
+  <h2>District app counts from this study</h2>
+  <p>The report's own Table 1 lists how many EdTech apps each Utah LEA reported using as of summer 2023. These are the source for the app counts shown on the Education docket:</p>
+  <table class="district-apps">
+    <thead><tr><th>District</th><th>Apps reported</th></tr></thead>
+    <tbody>
+      <tr><td>Provo City SD</td><td class="num">2,386</td></tr>
+      <tr><td>Jordan SD</td><td class="num">954</td></tr>
+      <tr><td>Granite SD</td><td class="num">694</td></tr>
+      <tr><td>Weber SD</td><td class="num">580</td></tr>
+      <tr><td>Tooele County SD</td><td class="num">77</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How this connects to the Gemini/Tooele story</h2>
+  <p>Google Gemini does not appear anywhere in this study's tested apps or app list — data collection ran 2023 through August 2025, before Gemini for Education existed in Utah schools (June 2026). Other Google products (Classroom, Workspace, Drive, Docs, Slides, Forms, Sites, Sheets) do appear, confirming Tooele and other districts were already Google Workspace customers before the Gemini rollout. See the <a href="tooele-county-sd.html">Tooele County SD case file</a> for that separate story.</p>
+
+  <h2>Questions worth asking</h2>
+  <ul>
+    <li>Why does USBE's own policy let a vendor's name be redacted just for "responding adequately" to an inquiry — protecting the worst data-sharing vendors from public identification while only naming the one that didn't cooperate?</li>
+    <li>If the average signed DPA specifies only 3 of 79 possible data elements, what is a district actually agreeing to when it signs one?</li>
+    <li>Does your own district's app list overlap with any of the three anonymized apps sharing data with 32, 33, or 54 advertisers?</li>
+    <li>If a vendor's DPA only covers its paid tier, how would a parent or teacher know their students are using the unprotected free version instead?</li>
+  </ul>
+
+  <details class="sources">
+    <summary>Sources</summary>
+    <ol>
+      <li>"Utah EdTech App Data Collection and Sharing: 2023-25 Investigation," USBE/BYU/Internet Safety Labs, dated August 20, 2025 — schools.utah.gov/studentdataprivacy</li>
+      <li>H.B. 55 (2026), Privacy Compliance for Education Technology Vendors, Rep. Tiara Auxier, primary sponsor</li>
+      <li>Utah Student Data Protection Act (2016), §53E-9-303, §53E-9-308, §53E-9-309</li>
+      <li>R277-487, Public School Data Confidentiality and Disclosure (USBE implementing rule)</li>
+      <li>August 2026 press coverage of the report's public release, incl. vendor follow-up statements</li>
+      <li>askbeforeyouapp.com/ecosystem/ut — public tracking resource for Utah's EdTech statutory scheme</li>
+    </ol>
+  </details>
+</main>
+
+<footer>
+  Part of the <a href="index.html">Education docket</a> at <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>. Corrections and documentation welcome.
+</footer>
+
+<script>
+  document.querySelectorAll(".flip-card").forEach(card=>{
+    const toggle = ()=>card.classList.toggle("flipped");
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", e=>{
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); toggle(); }
+    });
+  });
+</script>
+
+</body>
+</html>

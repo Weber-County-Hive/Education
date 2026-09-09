@@ -13,7 +13,7 @@ const EDUCATION_DISTRICTS = [
     appCountYear: 2023,
     devicePolicy: "Policy 5031 (AI glasses/device rules)",
     caseFile: "tooele-county-sd.html",
-    tags: ["gemini", "dpa-signed", "device-policy"]
+    tags: ["gemini", "dpa-signed", "device-policy", "hb55-study"]
   },
   {
     district: "Washington County SD",
@@ -34,8 +34,8 @@ const EDUCATION_DISTRICTS = [
     appCount: 580,
     appCountYear: 2023,
     devicePolicy: null,
-    caseFile: null,
-    tags: ["app-count-only"]
+    caseFile: "weber-hive-hb55-edtech-privacy.html",
+    tags: ["app-count-only", "hb55-study"]
   },
   {
     district: "Jordan SD",
@@ -45,8 +45,8 @@ const EDUCATION_DISTRICTS = [
     appCount: 954,
     appCountYear: 2023,
     devicePolicy: null,
-    caseFile: null,
-    tags: ["app-count-only"]
+    caseFile: "weber-hive-hb55-edtech-privacy.html",
+    tags: ["app-count-only", "hb55-study"]
   },
   {
     district: "Granite SD",
@@ -56,8 +56,8 @@ const EDUCATION_DISTRICTS = [
     appCount: 694,
     appCountYear: 2023,
     devicePolicy: null,
-    caseFile: null,
-    tags: ["app-count-only"]
+    caseFile: "weber-hive-hb55-edtech-privacy.html",
+    tags: ["app-count-only", "hb55-study"]
   },
   {
     district: "Provo City SD",
@@ -67,7 +67,7 @@ const EDUCATION_DISTRICTS = [
     appCount: 2386,
     appCountYear: 2023,
     devicePolicy: null,
-    caseFile: null,
-    tags: ["app-count-only"]
+    caseFile: "weber-hive-hb55-edtech-privacy.html",
+    tags: ["app-count-only", "hb55-study"]
   }
 ];
