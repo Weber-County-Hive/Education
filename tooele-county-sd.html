@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooele County SD — Education — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f1e6; --paper-line:#e4ddc9;
+    --chalk:#24372c; --chalk-soft:#3a4f42;
+    --brass:#b8933f; --rust:#a13f2b;
+    --ink:#2a2a24; --ink-soft:#5c5a4e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
+  a{color:var(--rust);}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:20px 24px 0;font-size:13px;font-family:"IBM Plex Mono",monospace;color:var(--ink-soft);}
+  .breadcrumb a{color:var(--ink-soft);border-bottom:1px solid var(--paper-line);text-decoration:none;}
+
+  header.band{background:var(--chalk);color:var(--paper);padding:32px 24px 40px;margin-top:16px;}
+  .band-inner{max-width:760px;margin:0 auto;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--brass);}
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);margin:12px 0 14px;letter-spacing:-0.01em;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#c8d0c9;margin-top:8px;}
+
+  main{max-width:760px;margin:0 auto;padding:36px 24px 24px;}
+
+  .glossary{display:flex;gap:14px;margin-bottom:28px;}
+  .flip-card{
+    flex:1 1 0;height:150px;perspective:1000px;cursor:pointer;
+  }
+  .flip-card-inner{
+    position:relative;width:100%;height:100%;text-align:left;
+    transition:transform 0.5s;transform-style:preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner{transform:rotateY(180deg);}
+  .flip-card-front,.flip-card-back{
+    position:absolute;width:100%;height:100%;backface-visibility:hidden;
+    border:1px solid var(--paper-line);padding:20px 22px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .flip-card-front{background:#fff;}
+  .flip-card-front .term{
+    font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:500;color:var(--chalk-soft);
+  }
+  .flip-card-front .tap-hint{font-size:12.5px;color:#a6a294;margin-top:10px;}
+  .flip-card-back{
+    background:var(--chalk);color:var(--paper);transform:rotateY(180deg);
+  }
+  .flip-card-back .def{font-size:14.5px;line-height:1.5;}
+
+  .newhere{background:#fff;border:1px solid var(--paper-line);border-left:4px solid var(--brass);padding:18px 20px;margin-bottom:36px;font-size:15px;}
+  .newhere p{margin:0 0 8px;}
+  .newhere p:last-child{margin-bottom:0;}
+
+  h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:40px 0 14px;color:var(--chalk);}
+  p{font-size:15.5px;margin:0 0 14px;}
+  ul{margin:0 0 14px;padding-left:20px;}
+  li{font-size:15.5px;margin-bottom:6px;}
+
+  .stat-strip{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0 30px;}
+  .stat-cell{background:#fff;border:1px solid var(--paper-line);padding:14px 16px;flex:1 1 150px;}
+  .stat-cell .num{font-family:"IBM Plex Mono",monospace;font-size:20px;color:var(--rust);display:block;}
+  .stat-cell .label{font-size:12.5px;color:var(--ink-soft);}
+
+  .callout{background:#fff;border:1px solid var(--paper-line);border-left:4px solid var(--rust);padding:16px 18px;margin:18px 0;font-size:15px;}
+  .callout-note{border-left-color:var(--brass);}
+
+  details.sources{background:#fff;border:1px solid var(--paper-line);padding:14px 18px;margin-top:36px;}
+  details.sources summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--chalk-soft);}
+  details.sources ol{margin-top:12px;padding-left:20px;}
+  details.sources li{font-size:13.5px;margin-bottom:8px;color:var(--ink-soft);}
+
+  footer{max-width:760px;margin:40px auto 0;padding:20px 24px 50px;font-size:13px;color:var(--ink-soft);border-top:1px solid var(--paper-line);}
+</style>
+</head>
+<body>
+
+<div class="breadcrumb"><a href="index.html">← Education docket</a></div>
+
+<header class="band">
+  <div class="band-inner">
+    <div class="eyebrow">Case file — Tooele County School District</div>
+    <h1>The Gemini Deployment No One Voted On</h1>
+    <div class="meta-row">
+      <span>Deployed: June 3, 2026</span>
+      <span>Tooele DPA signed: June 11, 2026</span>
+      <span>Board vote: none held</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="glossary">
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of DPA">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <span class="term">DPA</span>
+          <span class="tap-hint">Tap to define</span>
+        </div>
+        <div class="flip-card-back">
+          <span class="def">Data Processing Agreement — the contract that sets the rules for how a vendor is allowed to collect, use, store, and delete student data.</span>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card" tabindex="0" role="button" aria-label="Definition of USBE">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <span class="term">USBE</span>
+          <span class="tap-hint">Tap to define</span>
+        </div>
+        <div class="flip-card-back">
+          <span class="def">Utah State Board of Education — the elected 15-member body that oversees Utah's public schools.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="newhere">
+    <p><strong>New here?</strong> In June 2026, Utah's State Board of Education rolled out Google Gemini to roughly 680,000 K-12 students — without a vote from the elected 15-member Board, and without the safety review, parental notice, or audit terms state law requires. Tooele County School District signed the underlying Google contract on June 11.</p>
+    <p>This case file covers what the contract itself says, what state law required at the time, and what the district's own records do — and don't — show.</p>
+  </div>
+
+  <div class="stat-strip">
+    <div class="stat-cell"><span class="num">3</span><span class="label">Statutory requirements USBE's own records show weren't documented</span></div>
+    <div class="stat-cell"><span class="num">77</span><span class="label">EdTech apps Tooele reported in the 2023-25 BYU/ISL study</span></div>
+    <div class="stat-cell"><span class="num">180</span><span class="label">Days Google's contract allows to delete student data, up from 60</span></div>
+  </div>
+
+  <h2>What happened</h2>
+  <p>On June 3, 2026, State Superintendent Molly Hart and USBE AI Specialist Matt Winters announced Google Gemini for Education would be made available across Utah's public schools — without informing or getting a vote from the elected Board, and without a procurement process, privacy review, or parental-notification framework in place beforehand. Tooele County School District signed the Google Data Processing Agreement (DPA) governing the deployment eight days later, on June 11.</p>
+
+  <div class="callout callout-note">
+    <strong>What this case file does and doesn't establish.</strong> USBE's June 3 announcement made Gemini available statewide, to all Utah K-12 students — but availability isn't adoption. Only Tooele's signed DPA has been obtained and confirmed here. Whether other districts have signed the same contract, a variant of it, or nothing at all is not yet known. Treat the findings on this page as specific to Tooele's own agreement unless another district's contract is separately confirmed.
+  </div>
+
+  <h2>What state law required</h2>
+  <p>Three statutes bear on a rollout like this. Records USBE released in response to a records request show none of the required documentation existed for any of them:</p>
+  <ul>
+    <li><strong>§53G-7-228(2)(a)</strong> — requires an evidence-based safety review before instructional technology is deployed.</li>
+    <li><strong>§53G-7-1402(2)(j)</strong> — requires written parental notification before generative AI use, including a link to the district's metadata dictionary.</li>
+    <li><strong>§53E-9-309(2)(a)</strong> — requires specific audit and termination provisions in a district's contract with a third-party technology vendor.</li>
+  </ul>
+  <div class="callout callout-note">
+    <strong>Timing matters here.</strong> H.B. 273, the 2026 law creating the safety-review and parental-notice requirements above, did not take effect until July 1, 2026 — about a month after the June 3 announcement and three weeks after Tooele's DPA was signed. Whether the announcement itself broke a law that wasn't yet in effect is a different question from whether classroom use after July 1 complies with it. Both questions are live; neither is settled here.
+  </div>
+
+  <h2>What the contract itself does</h2>
+  <p>The Tooele DPA's terms consistently favor Google over the district that signed it:</p>
+  <ul>
+    <li>Covered services are defined by reference to a Google-controlled webpage — meaning Google can expand what's covered, including adding Gemini features, without a new contract or a board vote.</li>
+    <li>The same mechanism governs which subprocessors can access student data — Google can add companies by updating its own site.</li>
+    <li>The contract's data-deletion window was extended from 60 days to 180 in a Google-authored amendment.</li>
+    <li>The 72-hour breach-notification requirement was replaced with vaguer "promptly and without undue delay" language, and "Data Breach" was relabeled "Data Incident."</li>
+    <li>Google may charge for any audit of its own compliance, and may reject an auditor it deems "manifestly unsuitable" — a standard that functions as a veto over who audits it.</li>
+    <li>No geographic limit exists on where student data may be stored — the contract allows processing "in any country where Google or its Subprocessors maintain facilities."</li>
+  </ul>
+
+  <h2>Tooele's own board record</h2>
+  <p>No agenda item or minutes entry naming Google, Gemini, or the DPA has been found around Tooele's June 9 or June 16, 2026 board meetings — the deployment may have gone through administratively rather than as a board agenda item.</p>
+  <p>Tooele's Policy 5031 (Personal Technology and Communication Devices), rewritten in 2026, separately added AI-glasses regulation. Its definition of "AI glasses" closely mirrors the definition later written into state code by H.B. 44 — consistent with district staff aligning the policy to state code, as the district's own stated rationale holds.</p>
+
+  <h2>Questions worth asking</h2>
+  <ul>
+    <li>Have other Utah school districts signed this same Google DPA, a variant of it, or nothing at all? So far only Tooele's has been confirmed.</li>
+    <li>A Washington County board member described "the option of a state contract" districts can opt into — is that Tooele's own agreement functioning as the statewide template, or a separate master agreement that hasn't been obtained yet?</li>
+    <li>If your own district hasn't formally signed anything, are students there still using Gemini in the classroom under a teacher's personal Google login, a school-level pilot, or informal use that wouldn't show up in a board record at all?</li>
+    <li>Does your district's board have a public record of voting on, or even discussing, a Gemini/Google AI deployment? Tooele's doesn't appear to.</li>
+  </ul>
+
+  <details class="sources">
+    <summary>Sources</summary>
+    <ol>
+      <li>Google Data Processing Agreement, signed by Tooele County School District, June 11, 2026</li>
+      <li>USBE public records response confirming no documentation exists for §53G-7-228(2)(a), §53G-7-1402(2)(j), or §53E-9-309(2)(a) compliance</li>
+      <li>USBE press release, "USBE Adopts Gemini for Education," schools.utah.gov, June 2-3, 2026</li>
+      <li>Utah H.B. 273 (2026), Classroom Technology Amendments</li>
+      <li>Utah H.B. 44 (2026) / S.B. 69 (2026), coordination clause on device restrictions</li>
+      <li>Tooele County School District Policy 5031, Personal Technology and Communication Devices (2026 revision)</li>
+      <li>Tooele County School District board meeting records, June 9 and June 16, 2026</li>
+    </ol>
+  </details>
+</main>
+
+<footer>
+  Part of the <a href="index.html">Education docket</a> at <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>. Corrections and documentation welcome.
+</footer>
+
+<script>
+  document.querySelectorAll(".flip-card").forEach(card=>{
+    const toggle = ()=>card.classList.toggle("flipped");
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", e=>{
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); toggle(); }
+    });
+  });
+</script>
+
+</body>
+</html>

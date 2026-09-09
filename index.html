@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f1e6;
+    --paper-line:#e4ddc9;
+    --chalk:#24372c;
+    --chalk-soft:#3a4f42;
+    --brass:#b8933f;
+    --rust:#a13f2b;
+    --ink:#2a2a24;
+    --ink-soft:#5c5a4e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",sans-serif;
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  header.band{
+    background:var(--chalk);
+    color:var(--paper);
+    padding:56px 24px 40px;
+  }
+  .band-inner{max-width:980px;margin:0 auto;}
+  .repo-eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13px;
+    color:var(--brass);
+    text-decoration:none;
+    border-bottom:1px solid rgba(184,147,63,0.4);
+    padding-bottom:2px;
+  }
+  h1{
+    font-family:"Fraunces",serif;
+    font-weight:500;
+    font-size:clamp(32px,5vw,48px);
+    margin:18px 0 12px;
+    letter-spacing:-0.01em;
+  }
+  .band-desc{
+    max-width:640px;
+    color:#d8dfd9;
+    font-size:16px;
+    margin:0 0 28px;
+  }
+  .stat-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    border-top:1px solid rgba(245,241,230,0.18);
+    padding-top:24px;
+  }
+  .stat{min-width:120px;}
+  .stat .num{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:26px;
+    color:var(--brass);
+    display:block;
+  }
+  .stat .label{font-size:13px;color:#b9c2bb;}
+
+  main{max-width:980px;margin:0 auto;padding:36px 24px 80px;}
+
+  .toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+    align-items:center;
+  }
+  #search{
+    flex:1 1 260px;
+    padding:11px 14px;
+    border:1px solid var(--paper-line);
+    background:#fff;
+    border-radius:3px;
+    font-family:"Inter",sans-serif;
+    font-size:15px;
+    color:var(--ink);
+  }
+  #search:focus{outline:2px solid var(--brass);outline-offset:1px;}
+  .chip{
+    padding:8px 14px;
+    border:1px solid var(--paper-line);
+    background:#fff;
+    border-radius:20px;
+    font-size:13px;
+    cursor:pointer;
+    color:var(--ink-soft);
+    font-family:"Inter",sans-serif;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--chalk);
+    color:var(--paper);
+    border-color:var(--chalk);
+  }
+  .chip:focus-visible{outline:2px solid var(--brass);outline-offset:1px;}
+
+  .count-line{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+    font-family:"IBM Plex Mono",monospace;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border:1px solid var(--paper-line);
+  }
+  thead th{
+    text-align:left;
+    font-family:"Inter",sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding:12px 14px;
+    border-bottom:1px solid var(--paper-line);
+    cursor:pointer;
+    user-select:none;
+    white-space:nowrap;
+  }
+  thead th:hover{color:var(--ink);}
+  tbody tr{border-bottom:1px solid var(--paper-line);}
+  tbody tr:last-child{border-bottom:none;}
+  tbody tr:hover{background:#faf8f1;}
+  td{padding:13px 14px;font-size:14.5px;vertical-align:top;}
+  td.district{font-weight:600;}
+  td.county{color:var(--ink-soft);font-size:13px;}
+  .empty-cell{color:#a6a294;}
+  .dpa-yes{color:var(--chalk-soft);font-weight:600;}
+  .badge{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    padding:2px 8px;
+    border-radius:3px;
+    background:#efe9d8;
+    color:var(--ink-soft);
+  }
+  a.case-link{
+    color:var(--rust);
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid rgba(161,63,43,0.35);
+  }
+  a.case-link:hover{border-bottom-color:var(--rust);}
+  .no-case{color:#a6a294;font-size:13px;}
+
+  #no-results{
+    display:none;
+    padding:28px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:14px;
+    background:#fff;
+    border:1px dashed var(--paper-line);
+    margin-top:0;
+  }
+
+  footer{
+    max-width:980px;
+    margin:40px auto 0;
+    padding:20px 24px 40px;
+    font-size:13px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--paper-line);
+  }
+
+  @media (max-width:640px){
+    table, thead, tbody, tr, th, td{display:block;}
+    thead{display:none;}
+    tbody tr{padding:12px 14px;border-bottom:2px solid var(--paper-line);}
+    td{padding:4px 0;border:none;}
+    td::before{
+      content:attr(data-label);
+      display:block;
+      font-family:"IBM Plex Mono",monospace;
+      font-size:11px;
+      color:var(--ink-soft);
+      margin-bottom:2px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="band-inner">
+    <a class="repo-eyebrow" href="https://webercountyhive.substack.com/">The Weber County Hive</a>
+    <h1>Education</h1>
+    <p class="band-desc">Utah school districts, their AI vendor contracts, and what's actually documented about how student data is handled. Built from GRAMA responses, board records, and vendor contracts — not vendor marketing.</p>
+    <div class="stat-row" id="stat-row"></div>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="Search by district or county…" aria-label="Search districts">
+    <button class="chip" data-tag="gemini" aria-pressed="false">Gemini/Workspace</button>
+    <button class="chip" data-tag="dpa-signed" aria-pressed="false">DPA signed</button>
+    <button class="chip" data-tag="device-policy" aria-pressed="false">Device policy</button>
+    <button class="chip" data-tag="app-count-only" aria-pressed="false">App count only</button>
+  </div>
+
+  <div class="count-line" id="count-line"></div>
+
+  <table id="district-table">
+    <thead>
+      <tr>
+        <th data-sort="district">District</th>
+        <th data-sort="county">County</th>
+        <th data-sort="geminiStatus">Gemini / Workspace</th>
+        <th data-sort="dpaDate">DPA signed</th>
+        <th data-sort="appCount">EdTech apps</th>
+        <th data-sort="devicePolicy">Device policy</th>
+        <th>Case file</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <div id="no-results">No districts match that search.</div>
+</main>
+
+<footer>
+  Sourced from GRAMA responses, district board records, and vendor contracts obtained directly. A blank field means nothing has been confirmed yet for that district — not that nothing exists. Part of <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>.
+</footer>
+
+<script src="weber-hive-education-data.js"></script>
+<script>
+  let sortKey = "district";
+  let sortDir = 1;
+  let activeTags = new Set();
+  let query = "";
+
+  function fmtDate(d){
+    if(!d) return null;
+    const [y,m,day] = d.split("-");
+    const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${months[parseInt(m,10)-1]} ${parseInt(day,10)}, ${y}`;
+  }
+
+  function cell(value, label){
+    if(value === null || value === undefined || value === "") {
+      return `<td data-label="${label}"><span class="empty-cell">—</span></td>`;
+    }
+    return null;
+  }
+
+  function render(){
+    const body = document.getElementById("table-body");
+    const q = query.trim().toLowerCase();
+
+    let rows = EDUCATION_DISTRICTS.filter(d=>{
+      if(q && !(d.district.toLowerCase().includes(q) || d.county.toLowerCase().includes(q))) return false;
+      if(activeTags.size && !d.tags.some(t=>activeTags.has(t))) return false;
+      return true;
+    });
+
+    rows.sort((a,b)=>{
+      let av = a[sortKey], bv = b[sortKey];
+      if(av === null || av === undefined) av = "";
+      if(bv === null || bv === undefined) bv = "";
+      if(typeof av === "number" && typeof bv === "number") return (av-bv)*sortDir;
+      return String(av).localeCompare(String(bv)) * sortDir;
+    });
+
+    body.innerHTML = "";
+    document.getElementById("no-results").style.display = rows.length ? "none" : "block";
+    document.getElementById("count-line").textContent =
+      `${rows.length} district${rows.length===1?"":"s"} shown of ${EDUCATION_DISTRICTS.length} tracked`;
+
+    rows.forEach(d=>{
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="district" data-label="District">${d.district}</td>
+        <td class="county" data-label="County">${d.county}</td>
+        ${cell(d.geminiStatus,"Gemini / Workspace") || `<td data-label="Gemini / Workspace">${d.geminiStatus}</td>`}
+        ${cell(fmtDate(d.dpaDate),"DPA signed") || `<td data-label="DPA signed"><span class="dpa-yes">${fmtDate(d.dpaDate)}</span></td>`}
+        ${cell(d.appCount,"EdTech apps") || `<td data-label="EdTech apps"><span class="badge">${d.appCount}${d.appCountYear ? " ('"+String(d.appCountYear).slice(2)+")" : ""}</span></td>`}
+        ${cell(d.devicePolicy,"Device policy") || `<td data-label="Device policy">${d.devicePolicy}</td>`}
+        <td data-label="Case file">${d.caseFile ? `<a class="case-link" href="${d.caseFile}">Read the case file →</a>` : `<span class="no-case">Not yet built</span>`}</td>
+      `;
+      body.appendChild(tr);
+    });
+  }
+
+  function renderStats(){
+    const total = EDUCATION_DISTRICTS.length;
+    const withDpa = EDUCATION_DISTRICTS.filter(d=>d.dpaDate).length;
+    const withCaseFile = EDUCATION_DISTRICTS.filter(d=>d.caseFile).length;
+    const totalApps = EDUCATION_DISTRICTS.reduce((s,d)=>s+(d.appCount||0),0);
+    document.getElementById("stat-row").innerHTML = `
+      <div class="stat"><span class="num">${total}</span><span class="label">Districts tracked</span></div>
+      <div class="stat"><span class="num">${withDpa}</span><span class="label">Signed DPA on record</span></div>
+      <div class="stat"><span class="num">${withCaseFile}</span><span class="label">Full case files built</span></div>
+      <div class="stat"><span class="num">${totalApps.toLocaleString()}</span><span class="label">EdTech apps counted</span></div>
+    `;
+  }
+
+  document.getElementById("search").addEventListener("input", e=>{
+    query = e.target.value;
+    render();
+  });
+
+  document.querySelectorAll(".chip").forEach(chip=>{
+    chip.addEventListener("click", ()=>{
+      const tag = chip.dataset.tag;
+      if(activeTags.has(tag)){
+        activeTags.delete(tag);
+        chip.setAttribute("aria-pressed","false");
+      } else {
+        activeTags.add(tag);
+        chip.setAttribute("aria-pressed","true");
+      }
+      render();
+    });
+  });
+
+  document.querySelectorAll("th[data-sort]").forEach(th=>{
+    th.addEventListener("click", ()=>{
+      const key = th.dataset.sort;
+      if(sortKey === key){ sortDir *= -1; } else { sortKey = key; sortDir = 1; }
+      render();
+    });
+  });
+
+  renderStats();
+  render();
+</script>
+</body>
+</html>
