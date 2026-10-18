@@ -62,12 +62,24 @@ const EDUCATION_DISTRICTS = [
   {
     district: "Provo City SD",
     county: "Utah",
-    geminiStatus: null,
+    geminiStatus: "Not on student Chromebooks while AI policy is finished (KSL, Oct. 7, 2026)",
     dpaDate: null,
     appCount: 2386,
     appCountYear: 2023,
     devicePolicy: null,
     caseFile: "weber-hive-hb55-edtech-privacy.html",
-    tags: ["app-count-only", "hb55-study"]
+    tags: ["app-count-only", "hb55-study", "gemini"]
+  },
+  {
+    // added Oct. 18, 2026 from KSL, Oct. 7, 2026
+    district: "Canyons SD",
+    county: "Salt Lake",
+    geminiStatus: "On for teachers, staff and high school students only (KSL, Oct. 7, 2026)",
+    dpaDate: null,
+    appCount: null,
+    appCountYear: null,
+    devicePolicy: "Stoplight (red-yellow-green) rule for AI on assignments",
+    caseFile: null,
+    tags: ["gemini", "device-policy"]
   }
 ];

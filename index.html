@@ -4,18 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education — The Weber County Hive</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="icon" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#f5f1e6;
-    --paper-line:#e4ddc9;
-    --chalk:#24372c;
-    --chalk-soft:#3a4f42;
-    --brass:#b8933f;
-    --rust:#a13f2b;
-    --ink:#2a2a24;
-    --ink-soft:#5c5a4e;
+  :root{--paper:#FFFFFF;
+    --paper-line:#CDE5D4;
+    --chalk:#14532D;
+    --chalk-soft:#166534;
+    --brass:#22C55E;
+    --rust:#15803D;
+    --ink:#1F2937;
+    --ink-soft:#4B5563;
   }
   *{box-sizing:border-box;}
   body{
@@ -38,7 +39,7 @@
     font-size:13px;
     color:var(--brass);
     text-decoration:none;
-    border-bottom:1px solid rgba(184,147,63,0.4);
+    border-bottom:1px solid rgba(187,247,208,0.5);
     padding-bottom:2px;
   }
   h1{
@@ -50,7 +51,7 @@
   }
   .band-desc{
     max-width:640px;
-    color:#d8dfd9;
+    color:#DCFCE7;
     font-size:16px;
     margin:0 0 28px;
   }
@@ -68,7 +69,7 @@
     color:var(--brass);
     display:block;
   }
-  .stat .label{font-size:13px;color:#b9c2bb;}
+  .stat .label{font-size:13px;color:#BBF7D0;}
 
   main{max-width:980px;margin:0 auto;padding:36px 24px 80px;}
 
@@ -135,11 +136,11 @@
   thead th:hover{color:var(--ink);}
   tbody tr{border-bottom:1px solid var(--paper-line);}
   tbody tr:last-child{border-bottom:none;}
-  tbody tr:hover{background:#faf8f1;}
+  tbody tr:hover{background:#F0FDF4;}
   td{padding:13px 14px;font-size:14.5px;vertical-align:top;}
   td.district{font-weight:600;}
   td.county{color:var(--ink-soft);font-size:13px;}
-  .empty-cell{color:#a6a294;}
+  .empty-cell{color:#6B7280;}
   .dpa-yes{color:var(--chalk-soft);font-weight:600;}
   .badge{
     display:inline-block;
@@ -147,17 +148,17 @@
     font-size:12px;
     padding:2px 8px;
     border-radius:3px;
-    background:#efe9d8;
+    background:#DCFCE7;
     color:var(--ink-soft);
   }
   a.case-link{
     color:var(--rust);
     font-weight:600;
     text-decoration:none;
-    border-bottom:1px solid rgba(161,63,43,0.35);
+    border-bottom:1px solid rgba(21,128,61,0.35);
   }
   a.case-link:hover{border-bottom-color:var(--rust);}
-  .no-case{color:#a6a294;font-size:13px;}
+  .no-case{color:#6B7280;font-size:13px;}
 
   #no-results{
     display:none;
@@ -193,9 +194,109 @@
       margin-bottom:2px;
     }
   }
+
+/* Utah Hive Politics uniform layout, added Oct. 18, 2026 */
+html{scroll-behavior:smooth}
+.eyebrow,.repo-eyebrow{color:#BBF7D0 !important}
+.stat .num{color:#86EFAC !important}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+.hs-date{font-family:"IBM Plex Mono",monospace;font-size:13px;color:#DCFCE7;margin:14px 0 0}
+.hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:#F0FDF4;border:1px dashed #15803D;padding:14px 18px;margin:0 0 22px;font-size:16px}
+.hs-btn{display:inline-block;background:#14532D;color:#fff !important;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:6px;border:0 !important}
+.hs-short{background:#F0FDF4;border:1px solid #CDE5D4;border-left:6px solid #14532D;padding:18px 22px;margin:0 0 22px}
+.hs-short b.h{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:20px;color:#14532D;margin-bottom:8px}
+.hs-short ul{margin:0;padding-left:20px}
+.hs-short li{margin-bottom:8px;font-size:16px}
+.hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.hs-toc b{width:100%;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563}
+.hs-toc a{font-size:14px;padding:7px 12px;border:1px solid #CDE5D4;background:#fff;color:#1F2937;text-decoration:none;border-radius:999px}
+.hs-toc a:hover{border-color:#15803D}
+.hs-pages{background:#fff;border:1px solid #CDE5D4;padding:12px 18px;margin:0 0 30px}
+.hs-pages summary{cursor:pointer;font-weight:600;color:#14532D}
+.hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 18px}
+.hs-pages li{font-size:15px;line-height:1.35;margin:0}
+.hs-pages li.cur{font-weight:700}
+.hs-pages li.cur a{color:#1F2937;text-decoration:none}
+.hs-pages small{display:block;font-size:13px;color:#4B5563;font-weight:normal}
+.hs-sec{margin-top:40px}
+.hs-sec h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#14532D}
+.hs-upd{list-style:none;padding:0;margin:0;border-left:3px solid #22C55E}
+.hs-upd li{position:relative;padding:0 0 16px 18px;font-size:15.5px}
+.hs-upd li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid #15803D}
+.hs-upd .d{display:block;font-weight:700;color:#14532D;font-size:14px}
+.hs-upd .s{display:block;font-size:13.5px;color:#4B5563;margin-top:3px}
+.hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.hs-flip{text-align:left;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;cursor:pointer;font:inherit;color:#1F2937;min-height:96px}
+.hs-flip .ft{font-weight:700;font-size:18px}
+.hs-flip .fh{font-size:12.5px;color:#4B5563;margin-top:6px}
+.hs-flip .fd{display:none;margin-top:8px;font-size:15px}
+.hs-flip[aria-expanded="true"] .fd{display:block}
+.hs-flip[aria-expanded="true"] .fh{display:none}
+.hs-qa{display:grid;gap:10px}
+.hs-qa div{background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:15.5px}
+.hs-qa b{display:block;font-size:14px;color:#14532D;margin-bottom:4px}
+.hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.hs-cards a{display:block;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;text-decoration:none;color:#1F2937}
+.hs-cards a b{display:block;margin-bottom:4px}
+.hs-cards a span{font-size:14px;color:#4B5563}
+.hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.hs-counter div{background:#14532D;color:#fff;padding:14px;text-align:center}
+.hs-counter .n{font-size:28px;font-weight:700}
+.hs-counter .l{font-size:13px}
+.hs-note2{font-size:14px;color:#4B5563;margin-top:14px}
+.hs-corr{background:#FFFBEB;border-left:4px solid #B45309;padding:12px 16px;margin:0 0 30px;font-size:15px}
+.hs-corr b{color:#78350F}
+.hs-wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* interactive pieces, added Oct. 18, 2026 */
+.ix-hint{font-size:14px;color:#4B5563;margin:0 0 12px}
+.ix-tl{list-style:none;margin:0;padding:0;border-left:4px solid #22C55E}
+.ix-tl li{position:relative;margin:0 0 10px 0;padding-left:20px}
+.ix-tl li::before{content:"";position:absolute;left:-11px;top:14px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid #15803D}
+.ix-tl li.hot::before{background:#15803D}
+.ix-tl button{display:block;width:100%;text-align:left;background:#fff;border:1px solid #CDE5D4;border-radius:6px;padding:12px 14px;font:inherit;cursor:pointer;color:#1F2937}
+.ix-tl button:hover,.ix-tl button[aria-expanded="true"]{border-color:#15803D;background:#F0FDF4}
+.ix-tl .d{display:block;font-weight:700;color:#14532D;font-size:15px}
+.ix-tl .t{display:block;font-size:16px;margin-top:2px}
+.ix-tl .more{display:none;padding:10px 14px 4px;font-size:15.5px}
+.ix-tl .more .s{display:block;font-size:13.5px;color:#4B5563;margin-top:6px}
+.ix-tl li.open .more{display:block}
+.ix-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ix-tabs button{font:inherit;font-size:15px;padding:9px 14px;border:1px solid #CDE5D4;background:#fff;border-radius:999px;cursor:pointer;color:#1F2937}
+.ix-tabs button[aria-selected="true"]{background:#14532D;color:#fff;border-color:#14532D}
+.ix-panel{background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:16px 18px}
+.ix-panel h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#14532D}
+.ix-panel .lab{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563;margin:12px 0 4px;font-weight:600}
+.ix-panel p{margin:0 0 8px}
+.ix-ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 4px}
+.ix-ba div{border:1px solid #CDE5D4;padding:10px 12px;border-radius:6px;font-size:16px}
+.ix-ba .b{background:#F9FAFB}
+.ix-ba .af{background:#F0FDF4;border-color:#15803D}
+.ix-ba small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#4B5563;margin-bottom:4px}
+@media(max-width:560px){.ix-ba{grid-template-columns:1fr}}
+.ix-bars{display:grid;gap:10px}
+.ix-bars button{display:grid;grid-template-columns:minmax(110px,32%) 1fr;align-items:center;gap:10px;background:none;border:0;padding:4px 0;font:inherit;cursor:pointer;text-align:left;color:#1F2937}
+.ix-bars .lb{text-align:right;font-size:16px}
+.ix-bars .tr{display:flex;align-items:center;background:#F0FDF4;border-radius:4px;min-height:34px}
+.ix-bars .fl{height:34px;background:#15803D;border-radius:4px 0 0 4px;flex-shrink:0}
+.ix-bars button[aria-pressed="true"] .fl{background:#14532D}
+.ix-bars .v{margin-left:10px;font-weight:700;font-size:17px}
+.ix-detail{margin-top:12px;background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:16px;min-height:24px}
+#ix-map{height:440px;border:1px solid #CDE5D4;border-radius:6px;margin-bottom:8px}
+.ix-mapnote{font-size:13.5px;color:#4B5563;margin:0 0 30px}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <header class="band">
   <div class="band-inner">
@@ -203,11 +304,14 @@
     <h1>Education</h1>
     <p class="band-desc">Utah school districts, their AI vendor contracts, and what's actually documented about how student data is handled. Built from GRAMA responses, board records, and vendor contracts — not vendor marketing.</p>
     <div class="stat-row" id="stat-row"></div>
+    <p class="hs-date">Posted Sept. 9, 2026 · Updated Oct. 18, 2026</p>
   </div>
 </header>
 
 <main>
-  <div class="toolbar">
+<div class="hs-plain">New to this? <a class="hs-btn" href="weber-hive-education-plain.html">Read it in plain words</a> About 800 words, with one simple chart.</div><div class="hs-short" id="short"><b class="h">Short version</b><ul><li>This docket tracks Utah school districts: AI vendor contracts, EdTech apps and what is documented about how student data is handled.</li><li>Seven districts are tracked so far, with two full case files.</li><li>Only Tooele County School District&rsquo;s Google Gemini contract has been confirmed signed. Washington County says its students do not have Gemini at school.</li><li>Four more districts (Weber, Jordan, Granite, Provo) appear with app counts from the BYU study. Canyons was added Oct. 18, 2026 from a KSL report.</li><li>A dash (&mdash;) in the table means nothing has been confirmed yet, not that nothing exists.</li></ul></div><nav class="hs-toc" aria-label="On this page"><b>On this page</b><a href="#map">Map</a><a href="#table">The district table</a><a href="#updates">Updates since this was posted</a><a href="#words">Words to know</a><a href="#whom">Questions to ask</a><a href="#connected">Connected Hive work</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav><details class="hs-pages"><summary>Education pages (4) · tap to open</summary><ol><li class=cur><a href="index.html">Education docket</a><small>Every district we track, searchable</small></li><li><a href="weber-hive-education-plain.html">In plain words</a><small>The short, simple version of both case files</small></li><li><a href="tooele-county-sd.html">Tooele County SD: The Gemini deployment</a><small>Google AI contract, June 2026</small></li><li><a href="weber-hive-hb55-edtech-privacy.html">What 100 apps actually send</a><small>The BYU study and H.B. 55</small></li></ol></details>
+  <h2 id="map" style="font-family:Fraunces,serif;font-weight:500;font-size:22px;color:#14532D;margin:0 0 6px">Map of the districts we track</h2><p class="ix-hint">Tap a pin to see that district&rsquo;s row and case file. Tapping also filters the table below.</p><div id="ix-map" role="region" aria-label="Map of tracked school districts"></div><p class="ix-mapnote">Pins mark each district&rsquo;s main city, not its boundaries. Map tiles &copy; OpenStreetMap contributors.</p>
+  <div class="toolbar" id="table">
     <input type="text" id="search" placeholder="Search by district or county…" aria-label="Search districts">
     <button class="chip" data-tag="gemini" aria-pressed="false">Gemini/Workspace</button>
     <button class="chip" data-tag="dpa-signed" aria-pressed="false">DPA signed</button>
@@ -234,11 +338,13 @@
   </table>
 
   <div id="no-results">No districts match that search.</div>
+<section class="hs-sec" id="updates"><h2>Updates since this was posted</h2><p>News and records found online, with dates. Earlier entries are not changed.</p><ul class="hs-upd"><li><span class="d">Oct. 18, 2026</span>Page redone to match the other Utah Hive Politics repos: new colors, short version, plain-words page, dated updates and reader questions. No earlier text was removed.<span class="s">Source: The Weber County Hive</span></li><li><span class="d">Oct. 18, 2026 (record check)</span>Tooele County School District board agendas on the Utah Public Notice Website for April 21, May 12, June 9 and Aug. 11, 2026, and the Aug. 11 minutes, list no item naming Google, Gemini, artificial intelligence or a data privacy agreement. Policy 5031 had its 1st read April 21 and 2nd read May 12, 2026. Read by text search of the posted PDFs; the July 28 work session and the meetings after Aug. 11 have not been checked yet.<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1415901.pdf" target="_blank" rel="noopener">Apr. 21 agenda</a>, <a href="https://www.utah.gov/pmn/files/1428717.pdf" target="_blank" rel="noopener">May 12 agenda</a>, <a href="https://www.utah.gov/pmn/files/1436281.pdf" target="_blank" rel="noopener">June 9 agenda</a>, <a href="https://www.utah.gov/pmn/files/1470455.pdf" target="_blank" rel="noopener">Aug. 11 agenda</a>, <a href="https://www.utah.gov/pmn/files/1485841.pdf" target="_blank" rel="noopener">Aug. 11 minutes</a></span></li><li><span class="d">Oct. 18, 2026 (record check)</span>The state rule R277-487 still lets a vendor meet the audit requirement with a self-assessment or an industry audit report such as SOC2 or SOC3. USBE&rsquo;s rules page lists its last change as July 8, 2025, before H.B. 55 took effect July 1, 2026; no amendment was listed.<span class="s">Source: <a href="https://www.schools.utah.gov/adminrules/R277-487" target="_blank" rel="noopener">USBE, R277-487 rule page</a></span></li><li><span class="d">Oct. 18, 2026</span>Fixed the &ldquo;Full case files built&rdquo; count at the top. It showed 5 because it counted every district row that links to a case file; four rows share the same H.B. 55 case file. There are 2 case files.<span class="s">Source: The Weber County Hive</span></li><li><span class="d">Oct. 7, 2026</span>KSL reported that Canyons School District turned Gemini on for teachers, staff and high school students only, with a red-yellow-green rule for when AI may be used on assignments. Provo City School District told parents Gemini and other AI chatbots are not available on student Chromebooks while it finishes its AI policy. The Provo row and a new Canyons row in the table use this report.<span class="s">Source: <a href="https://www.ksl.com/article/51633703/how-utah-students-use-ai-in-school-depends-on-where-they-go" target="_blank" rel="noopener">KSL, Eric Cabrera, Oct. 7, 2026</a></span></li><li><span class="d">Sept. 4, 2026 (record found Oct. 18, 2026)</span>The board&rsquo;s Standards and Assessment Committee gave preliminary approval to a &ldquo;Utah Instructional Technology and Artificial Intelligence Model Policy&rdquo; for districts to use when writing their own AI policies, and to creating an Artificial Intelligence Student Task Force. The final full-board action on both has not been checked yet.<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></span></li><li><span class="d">Aug. 6, 2026 (record found Oct. 18, 2026)</span>The State Board of Education approved a new rule, R277-334, Classroom Technology, to carry out H.B. 273. Per the board&rsquo;s meeting summary, it requires districts and charter schools to adopt policies on technology and AI use, train educators and &ldquo;ensure parent transparency and student protections.&rdquo;<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026</a></span></li><li><span class="d">Aug. 18, 2026 (found Oct. 18, 2026)</span>KSL reported on the BYU study and H.B. 55. Details are on the H.B. 55 case file.<span class="s">Source: <a href="https://www.ksl.com/article/51611276/how-a-byu-study-led-utah-lawmakers-to-pass-a-student-data-privacy-law" target="_blank" rel="noopener">KSL, Aug. 18, 2026</a></span></li><li><span class="d">July 2, 2026 (found Oct. 18, 2026)</span>St. George News reported that Washington County students do not have Gemini at school; staff use it under District Policy 3750. This matches the Washington County row in the table.<span class="s">Source: <a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News, July 2, 2026</a></span></li><li><span class="d">June 11, 2026 (found Oct. 18, 2026)</span>KUER reported that USBE calls Gemini &ldquo;an option, not a requirement,&rdquo; with a statewide data privacy agreement for districts that opt in. Details are on the Tooele case file.<span class="s">Source: <a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER, June 11, 2026</a></span></li></ul></section><section class="hs-sec" id="words"><h2>Words to know</h2><p>Tap a card to see what it means.</p><div class="hs-flips"><button class="hs-flip" aria-expanded="false"><div class="ft">DPA</div><div class="fh">Tap to see</div><div class="fd">Data Processing Agreement: the contract that sets the rules for how a vendor may collect, use, store and delete student data.</div></button><button class="hs-flip" aria-expanded="false"><div class="ft">USBE</div><div class="fh">Tap to see</div><div class="fd">Utah State Board of Education: the elected 15-member body that oversees Utah&rsquo;s public schools.</div></button><button class="hs-flip" aria-expanded="false"><div class="ft">EdTech</div><div class="fh">Tap to see</div><div class="fd">Education technology: apps, websites and software used for school work.</div></button><button class="hs-flip" aria-expanded="false"><div class="ft">Gemini for Education</div><div class="fh">Tap to see</div><div class="fd">Google&rsquo;s AI chat and writing tool for schools. USBE offered it to Utah districts in June 2026; each district decides whether to use it.</div></button></div></section><section class="hs-sec" id="whom"><h2>Questions to ask, and whom to ask</h2><div class="hs-qa"><div><b>Your local school board</b>Has our district signed on to the state&rsquo;s Google Gemini agreement, and was it discussed or voted on in a public meeting? Which EdTech apps does our district use, and which have a signed data privacy agreement?</div><div><b>Utah State Board of Education, student data privacy team</b>Which districts and charter schools have opted in to the statewide Google agreement, and is that agreement posted publicly? St. George News listed the team&rsquo;s contact as privacy@schools.utah.gov.</div><div><b>Your state representative and senator</b>The state rule (R277-487-7(5)) lets vendors meet the audit requirement with a self-assessment. Should a true outside audit be required?</div></div></section><section class="hs-sec" id="connected"><h2>Connected Hive work</h2><div class="hs-cards"><a href="tooele-county-sd.html"><b>Tooele County SD: The Gemini deployment</b><span>The Google AI contract a Utah district signed in June 2026.</span></a><a href="weber-hive-hb55-edtech-privacy.html"><b>What 100 apps actually send</b><span>The BYU study of EdTech apps and the H.B. 55 law that followed.</span></a><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html"><b>H.B. 273, Classroom Technology Amendments</b><span>Bill-Tracker case file: how the classroom tech standard was loosened by a Senate floor amendment.</span></a><a href="https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch-part-2.html#case7"><b>Bills That Did the Opposite, Case 7</b><span>H.B. 273 in the bait-and-switch series: &ldquo;designed for&rdquo; became &ldquo;demonstrated to have value.&rdquo;</span></a></div></section><section class="hs-sec" id="behind"><h2>Behind this piece</h2><div class="hs-counter"><div><div class="n">7</div><div class="l">Districts tracked</div></div><div><div class="n">2</div><div class="l">Full case files</div></div><div><div class="n">4</div><div class="l">Pages in this repo</div></div><div><div class="n">11</div><div class="l">Records and reports added this update</div></div></div><p class="hs-note2">Posted Sept. 9, 2026. Redone Oct. 18, 2026; nothing earlier was removed.</p></section><section class="hs-sec" id="sources"><details class="sources-toggle" style="background:#fff;border:1px solid #CDE5D4;padding:14px 18px;"><summary style="cursor:pointer;font-weight:600;color:#166534;">Sources (tap to open)</summary><ol style="margin-top:12px;font-size:14px;color:#4B5563;"><li>Each case file lists its own sources: <a href="tooele-county-sd.html#sources">Tooele County SD</a> and <a href="weber-hive-hb55-edtech-privacy.html#sources">What 100 apps actually send</a>.</li><li>App counts: &ldquo;Utah EdTech App Data Collection and Sharing: 2023-25 Investigation,&rdquo; USBE/BYU/Internet Safety Labs, Table 1.</li><li>Washington County: <a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News, July 2, 2026</a>; District Policy 3750.</li><li><a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER, June 11, 2026</a></li></ol></details></section>
 </main>
 
 <footer>
   Sourced from GRAMA responses, district board records, and vendor contracts obtained directly. A blank field means nothing has been confirmed yet for that district — not that nothing exists. Part of <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>.
 </footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
 
 <script src="weber-hive-education-data.js"></script>
 <script>
@@ -302,7 +408,7 @@
   function renderStats(){
     const total = EDUCATION_DISTRICTS.length;
     const withDpa = EDUCATION_DISTRICTS.filter(d=>d.dpaDate).length;
-    const withCaseFile = EDUCATION_DISTRICTS.filter(d=>d.caseFile).length;
+    const withCaseFile = new Set(EDUCATION_DISTRICTS.filter(d=>d.caseFile).map(d=>d.caseFile)).size;
     const totalApps = EDUCATION_DISTRICTS.reduce((s,d)=>s+(d.appCount||0),0);
     document.getElementById("stat-row").innerHTML = `
       <div class="stat"><span class="num">${total}</span><span class="label">Districts tracked</span></div>
@@ -341,6 +447,29 @@
 
   renderStats();
   render();
+</script>
+<script>document.querySelectorAll('.hs-flip').forEach(f=>f.addEventListener('click',()=>f.setAttribute('aria-expanded',f.getAttribute('aria-expanded')==='true'?'false':'true')));</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  if(typeof L==='undefined'){document.getElementById('ix-map').style.display='none';return;}
+  var spots={"Tooele County SD":[40.5308,-112.2983,"Tooele"],"Washington County SD":[37.0965,-113.5684,"St. George"],"Weber SD":[41.2230,-111.9738,"Ogden"],
+    "Jordan SD":[40.6097,-111.9391,"West Jordan"],"Granite SD":[40.7187,-111.8883,"South Salt Lake"],"Provo City SD":[40.2338,-111.6585,"Provo"],"Canyons SD":[40.5649,-111.8389,"Sandy"]};
+  var map=L.map('ix-map',{scrollWheelZoom:false}).setView([39.6,-111.9],7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  var pts=[];
+  EDUCATION_DISTRICTS.forEach(function(d){
+    var p=spots[d.district]; if(!p) return;
+    var rows='<b style="font-size:16px">'+d.district+'</b><br><span style="color:#4B5563">'+p[2]+', '+d.county+' County</span>'
+      +'<br>Gemini / Workspace: '+(d.geminiStatus||'&mdash;')
+      +(d.appCount?'<br>EdTech apps (2023): '+d.appCount.toLocaleString():'')
+      +(d.caseFile?'<br><a href="'+d.caseFile+'">Read the case file &rarr;</a>':'<br><i>Case file not yet built</i>');
+    var m=L.circleMarker([p[0],p[1]],{radius:11,color:'#14532D',weight:3,fillColor:d.caseFile?'#15803D':'#ffffff',fillOpacity:1}).addTo(map).bindPopup(rows);
+    m.on('click',function(){var s=document.getElementById('search');s.value=d.district;s.dispatchEvent(new Event('input'));});
+    pts.push([p[0],p[1]]);
+  });
+  if(pts.length) map.fitBounds(pts,{padding:[30,30]});
+})();
 </script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

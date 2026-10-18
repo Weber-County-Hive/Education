@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What 100 Apps Actually Send — Education — The Weber County Hive</title>
+<link rel="icon" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#f5f1e6; --paper-line:#e4ddc9;
-    --chalk:#24372c; --chalk-soft:#3a4f42;
-    --brass:#b8933f; --rust:#a13f2b;
-    --ink:#2a2a24; --ink-soft:#5c5a4e;
+  :root{--paper:#FFFFFF; --paper-line:#CDE5D4;
+    --chalk:#14532D; --chalk-soft:#166534;
+    --brass:#22C55E; --rust:#15803D;
+    --ink:#1F2937; --ink-soft:#4B5563;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
@@ -23,7 +23,7 @@
   .band-inner{max-width:760px;margin:0 auto;}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--brass);}
   h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);margin:12px 0 14px;letter-spacing:-0.01em;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#c8d0c9;margin-top:8px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#DCFCE7;margin-top:8px;}
 
   main{max-width:760px;margin:0 auto;padding:36px 24px 24px;}
 
@@ -45,7 +45,7 @@
   .flip-card-front .term{
     font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--chalk-soft);
   }
-  .flip-card-front .tap-hint{font-size:12px;color:#a6a294;margin-top:8px;}
+  .flip-card-front .tap-hint{font-size:12px;color:#6B7280;margin-top:8px;}
   .flip-card-back{
     background:var(--chalk);color:var(--paper);transform:rotateY(180deg);
   }
@@ -83,9 +83,109 @@
   details.sources li{font-size:13.5px;margin-bottom:8px;color:var(--ink-soft);}
 
   footer{max-width:760px;margin:40px auto 0;padding:20px 24px 50px;font-size:13px;color:var(--ink-soft);border-top:1px solid var(--paper-line);}
+
+/* Utah Hive Politics uniform layout, added Oct. 18, 2026 */
+html{scroll-behavior:smooth}
+.eyebrow,.repo-eyebrow{color:#BBF7D0 !important}
+.stat .num{color:#86EFAC !important}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+.hs-date{font-family:"IBM Plex Mono",monospace;font-size:13px;color:#DCFCE7;margin:14px 0 0}
+.hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:#F0FDF4;border:1px dashed #15803D;padding:14px 18px;margin:0 0 22px;font-size:16px}
+.hs-btn{display:inline-block;background:#14532D;color:#fff !important;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:6px;border:0 !important}
+.hs-short{background:#F0FDF4;border:1px solid #CDE5D4;border-left:6px solid #14532D;padding:18px 22px;margin:0 0 22px}
+.hs-short b.h{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:20px;color:#14532D;margin-bottom:8px}
+.hs-short ul{margin:0;padding-left:20px}
+.hs-short li{margin-bottom:8px;font-size:16px}
+.hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.hs-toc b{width:100%;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563}
+.hs-toc a{font-size:14px;padding:7px 12px;border:1px solid #CDE5D4;background:#fff;color:#1F2937;text-decoration:none;border-radius:999px}
+.hs-toc a:hover{border-color:#15803D}
+.hs-pages{background:#fff;border:1px solid #CDE5D4;padding:12px 18px;margin:0 0 30px}
+.hs-pages summary{cursor:pointer;font-weight:600;color:#14532D}
+.hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 18px}
+.hs-pages li{font-size:15px;line-height:1.35;margin:0}
+.hs-pages li.cur{font-weight:700}
+.hs-pages li.cur a{color:#1F2937;text-decoration:none}
+.hs-pages small{display:block;font-size:13px;color:#4B5563;font-weight:normal}
+.hs-sec{margin-top:40px}
+.hs-sec h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#14532D}
+.hs-upd{list-style:none;padding:0;margin:0;border-left:3px solid #22C55E}
+.hs-upd li{position:relative;padding:0 0 16px 18px;font-size:15.5px}
+.hs-upd li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid #15803D}
+.hs-upd .d{display:block;font-weight:700;color:#14532D;font-size:14px}
+.hs-upd .s{display:block;font-size:13.5px;color:#4B5563;margin-top:3px}
+.hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.hs-flip{text-align:left;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;cursor:pointer;font:inherit;color:#1F2937;min-height:96px}
+.hs-flip .ft{font-weight:700;font-size:18px}
+.hs-flip .fh{font-size:12.5px;color:#4B5563;margin-top:6px}
+.hs-flip .fd{display:none;margin-top:8px;font-size:15px}
+.hs-flip[aria-expanded="true"] .fd{display:block}
+.hs-flip[aria-expanded="true"] .fh{display:none}
+.hs-qa{display:grid;gap:10px}
+.hs-qa div{background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:15.5px}
+.hs-qa b{display:block;font-size:14px;color:#14532D;margin-bottom:4px}
+.hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.hs-cards a{display:block;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;text-decoration:none;color:#1F2937}
+.hs-cards a b{display:block;margin-bottom:4px}
+.hs-cards a span{font-size:14px;color:#4B5563}
+.hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.hs-counter div{background:#14532D;color:#fff;padding:14px;text-align:center}
+.hs-counter .n{font-size:28px;font-weight:700}
+.hs-counter .l{font-size:13px}
+.hs-note2{font-size:14px;color:#4B5563;margin-top:14px}
+.hs-corr{background:#FFFBEB;border-left:4px solid #B45309;padding:12px 16px;margin:0 0 30px;font-size:15px}
+.hs-corr b{color:#78350F}
+.hs-wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* interactive pieces, added Oct. 18, 2026 */
+.ix-hint{font-size:14px;color:#4B5563;margin:0 0 12px}
+.ix-tl{list-style:none;margin:0;padding:0;border-left:4px solid #22C55E}
+.ix-tl li{position:relative;margin:0 0 10px 0;padding-left:20px}
+.ix-tl li::before{content:"";position:absolute;left:-11px;top:14px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid #15803D}
+.ix-tl li.hot::before{background:#15803D}
+.ix-tl button{display:block;width:100%;text-align:left;background:#fff;border:1px solid #CDE5D4;border-radius:6px;padding:12px 14px;font:inherit;cursor:pointer;color:#1F2937}
+.ix-tl button:hover,.ix-tl button[aria-expanded="true"]{border-color:#15803D;background:#F0FDF4}
+.ix-tl .d{display:block;font-weight:700;color:#14532D;font-size:15px}
+.ix-tl .t{display:block;font-size:16px;margin-top:2px}
+.ix-tl .more{display:none;padding:10px 14px 4px;font-size:15.5px}
+.ix-tl .more .s{display:block;font-size:13.5px;color:#4B5563;margin-top:6px}
+.ix-tl li.open .more{display:block}
+.ix-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ix-tabs button{font:inherit;font-size:15px;padding:9px 14px;border:1px solid #CDE5D4;background:#fff;border-radius:999px;cursor:pointer;color:#1F2937}
+.ix-tabs button[aria-selected="true"]{background:#14532D;color:#fff;border-color:#14532D}
+.ix-panel{background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:16px 18px}
+.ix-panel h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#14532D}
+.ix-panel .lab{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563;margin:12px 0 4px;font-weight:600}
+.ix-panel p{margin:0 0 8px}
+.ix-ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 4px}
+.ix-ba div{border:1px solid #CDE5D4;padding:10px 12px;border-radius:6px;font-size:16px}
+.ix-ba .b{background:#F9FAFB}
+.ix-ba .af{background:#F0FDF4;border-color:#15803D}
+.ix-ba small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#4B5563;margin-bottom:4px}
+@media(max-width:560px){.ix-ba{grid-template-columns:1fr}}
+.ix-bars{display:grid;gap:10px}
+.ix-bars button{display:grid;grid-template-columns:minmax(110px,32%) 1fr;align-items:center;gap:10px;background:none;border:0;padding:4px 0;font:inherit;cursor:pointer;text-align:left;color:#1F2937}
+.ix-bars .lb{text-align:right;font-size:16px}
+.ix-bars .tr{display:flex;align-items:center;background:#F0FDF4;border-radius:4px;min-height:34px}
+.ix-bars .fl{height:34px;background:#15803D;border-radius:4px 0 0 4px;flex-shrink:0}
+.ix-bars button[aria-pressed="true"] .fl{background:#14532D}
+.ix-bars .v{margin-left:10px;font-weight:700;font-size:17px}
+.ix-detail{margin-top:12px;background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:16px;min-height:24px}
+#ix-map{height:440px;border:1px solid #CDE5D4;border-radius:6px;margin-bottom:8px}
+.ix-mapnote{font-size:13.5px;color:#4B5563;margin:0 0 30px}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="breadcrumb"><a href="index.html">← Education docket</a></div>
 
@@ -98,11 +198,13 @@
       <span>Public coverage: August 2026</span>
       <span>HB 55 effective: July 1, 2026</span>
     </div>
+    <p class="hs-date">Posted Sept. 9, 2026 · Updated Oct. 18, 2026</p>
   </div>
 </header>
 
 <main>
-  <div class="glossary">
+<div class="hs-plain">New to this? <a class="hs-btn" href="weber-hive-education-plain.html">Read it in plain words</a> About 800 words, with one simple chart.</div><div class="hs-short" id="short"><b class="h">Short version</b><ul><li>Researchers at BYU and Internet Safety Labs tested 100 EdTech apps used in Utah classrooms (2023&ndash;25) and recorded what each app actually sent.</li><li>52% of apps with a signed data privacy agreement (44 of 85) collected at least one piece of data their contract did not allow.</li><li>61% of tested apps share data with third parties; 36% share with advertisers.</li><li>H.B. 55 (Rep. Tiara Auxier, primary sponsor) took effect July 1, 2026. It adds stricter privacy terms, audits and contract termination for vendors that break the rules.</li><li>The state rule still lets vendors meet the audit requirement with a self-assessment. A true onsite audit happens only if the vendor agrees.</li></ul></div><nav class="hs-toc" aria-label="On this page"><b>On this page</b><a href="#timeline">The timeline</a><a href="#study">The study</a><a href="#found">What they found</a><a href="#charts">Charts</a><a href="#law">H.B. 55</a><a href="#loophole">The loophole</a><a href="#counts">District app counts</a><a href="#gemini">The Gemini connection</a><a href="#updates">Updates since this was posted</a><a href="#words">Words to know</a><a href="#ask">Questions to ask</a><a href="#connected">Connected Hive work</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav><details class="hs-pages"><summary>Education pages (4) · tap to open</summary><ol><li><a href="index.html">Education docket</a><small>Every district we track, searchable</small></li><li><a href="weber-hive-education-plain.html">In plain words</a><small>The short, simple version of both case files</small></li><li><a href="tooele-county-sd.html">Tooele County SD: The Gemini deployment</a><small>Google AI contract, June 2026</small></li><li class=cur><a href="weber-hive-hb55-edtech-privacy.html">What 100 apps actually send</a><small>The BYU study and H.B. 55</small></li></ol></details>
+  <div class="glossary" id="words">
     <div class="flip-card" tabindex="0" role="button" aria-label="Definition of DPA">
       <div class="flip-card-inner">
         <div class="flip-card-front"><span class="term">DPA</span><span class="tap-hint">Tap to define</span></div>
@@ -140,11 +242,13 @@
     <div class="stat-cell"><span class="num">3</span><span class="label">Data elements the average DPA specifies, out of 79 possible</span></div>
   </div>
 
-  <h2>The study</h2>
+  <h2 id="timeline">The timeline</h2><p class="ix-hint">Tap a date to see what happened and where it comes from. Filled dots mark the key dates.</p><ul class="ix-tl"><li class=""><button aria-expanded="false"><span class="d">Summer 2023</span><span class="t">Districts report their app lists</span></button><div class="more">The study&rsquo;s Table 1 uses each district&rsquo;s app count as of summer 2023. Researchers found more than 3,000 unique apps statewide and picked 100 to test.<span class="s">Source: &ldquo;Utah EdTech App Data Collection and Sharing: 2023-25 Investigation&rdquo;</span></div></li><li class=""><button aria-expanded="false"><span class="d">Aug. 20, 2025</span><span class="t">The BYU and Internet Safety Labs report is dated</span></button><div class="more">USBE funded the work. Test accounts posed as students under 13; researchers recorded what each app sent.<span class="s">Source: &ldquo;Utah EdTech App Data Collection and Sharing: 2023-25 Investigation,&rdquo; schools.utah.gov/studentdataprivacy</span></div></li><li class=""><button aria-expanded="false"><span class="d">2026 General Session</span><span class="t">H.B. 55 passes</span></button><div class="more">Rep. Tiara Auxier is the primary sponsor. The law adds stricter privacy terms, audits and contract termination for vendors that break the rules.<span class="s">Source: <a href="https://le.utah.gov/~2026/bills/static/HB0055.html" target="_blank" rel="noopener">H.B. 55, le.utah.gov</a></span></div></li><li class="hot"><button aria-expanded="false"><span class="d">July 1, 2026</span><span class="t">H.B. 55 takes effect</span></button><div class="more">KSL reports a contract must be ended if a violation is not fixed within 30 days.<span class="s">Source: <a href="https://www.ksl.com/article/51611276/how-a-byu-study-led-utah-lawmakers-to-pass-a-student-data-privacy-law" target="_blank" rel="noopener">KSL, Aug. 18, 2026</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Aug. 18, 2026</span><span class="t">The study gets wide coverage</span></button><div class="more">KSL reports vendors could fix problems through a USBE reconciliation process, after which their names came off the non-compliance list.<span class="s">Source: <a href="https://www.ksl.com/article/51611276/how-a-byu-study-led-utah-lawmakers-to-pass-a-student-data-privacy-law" target="_blank" rel="noopener">KSL, Aug. 18, 2026</a></span></div></li><li class="hot"><button aria-expanded="false"><span class="d">Oct. 18, 2026</span><span class="t">The state rule has not changed</span></button><div class="more">R277-487 still lets vendors meet the audit requirement with a self-assessment or an industry audit report. Its last change is listed as July 8, 2025.<span class="s">Source: <a href="https://www.schools.utah.gov/adminrules/R277-487" target="_blank" rel="noopener">USBE, R277-487 rule page</a></span></div></li></ul>
+
+  <h2 id="study">The study</h2>
   <p>"Utah EdTech App Data Collection and Sharing: 2023-25 Investigation" was a joint project between the Utah State Board of Education (USBE) and researchers Mark Keith and Justin Giboney at BYU, working with Lisa LeVasseur and Bryce Simpson at Internet Safety Labs. USBE itself funded the work.</p>
   <p>Researchers identified more than 3,000 unique EdTech apps in use statewide, then selected 100 for deep testing based on usage frequency, authentication requirements, and contract status. They created test accounts mimicking students under 13, used each app for 15-20 minutes, and captured all outgoing network traffic — comparing what left the app against the 79 student data elements Utah's own contract template allows vendors to collect.</p>
 
-  <h2>What they found</h2>
+  <h2 id="found">What they found</h2>
   <ul>
     <li>52% of apps with a signed DPA (44 of 85) collected at least one data element they weren't contractually permitted to collect.</li>
     <li>61% of tested apps share data with third parties; 36% share specifically with advertisers.</li>
@@ -153,17 +257,19 @@
     <li>CoolMathGames.com was separately found running location-based behavioral advertising on a kids' site, ignored a private disclosure from researchers for months, and only fixed it after public exposure.</li>
   </ul>
 
+  <h2 id="charts">The findings, in pictures</h2><p class="ix-hint">Percent of the 100 tested apps unless noted. Tap a bar for details.</p><div class="ix-barset"><div class="ix-bars"><button aria-pressed="false" data-detail="44 of 85 apps with a signed data privacy agreement collected at least one piece of data the contract did not permit."><span class="lb">Apps with a signed DPA that collected data their contract did not allow</span><span class="tr"><span class="fl" style="width:66.5%"></span><span class="v">52%</span></span></button><button aria-pressed="false" data-detail="Third parties are other companies outside the app maker."><span class="lb">Tested apps that share data with third parties</span><span class="tr"><span class="fl" style="width:78.0%"></span><span class="v">61%</span></span></button><button aria-pressed="false" data-detail="The most common item shared with advertisers was a UUID, a code that tracks a device or user. The state contract form has no checkbox for it."><span class="lb">Tested apps that share data with advertisers</span><span class="tr"><span class="fl" style="width:46.0%"></span><span class="v">36%</span></span></button></div><div class="ix-detail">Tap a bar to see the details.</div></div><h3 style="font-family:Fraunces,serif;font-weight:500;font-size:20px;color:#14532D;margin:28px 0 6px">EdTech apps each district reported (2023)</h3><p class="ix-hint">Longer bar = more apps. Tap a bar for details.</p><div class="ix-barset"><div class="ix-bars"><button aria-pressed="false" data-detail="Provo City School District reported 2,386 EdTech apps in summer 2023 (BYU study, Table 1). Oct. 7, 2026: Provo kept Gemini off student Chromebooks while it writes its AI policy (KSL)."><span class="lb">Provo City SD</span><span class="tr"><span class="fl" style="width:78.0%"></span><span class="v">2,386</span></span></button><button aria-pressed="false" data-detail="Jordan School District reported 954 apps (BYU study, Table 1)."><span class="lb">Jordan SD</span><span class="tr"><span class="fl" style="width:31.2%"></span><span class="v">954</span></span></button><button aria-pressed="false" data-detail="Granite School District reported 694 apps (BYU study, Table 1)."><span class="lb">Granite SD</span><span class="tr"><span class="fl" style="width:22.7%"></span><span class="v">694</span></span></button><button aria-pressed="false" data-detail="Weber School District reported 580 apps (BYU study, Table 1)."><span class="lb">Weber SD</span><span class="tr"><span class="fl" style="width:19.0%"></span><span class="v">580</span></span></button><button aria-pressed="false" data-detail="Tooele County School District reported 77 apps (BYU study, Table 1). It is also the district that signed the Google Gemini contract; see the Tooele case file."><span class="lb">Tooele County SD</span><span class="tr"><span class="fl" style="width:2.5%"></span><span class="v">77</span></span></button></div><div class="ix-detail">Tap a bar to see the details.</div></div>
+
   <div class="callout callout-note">
     <strong>Vendor follow-up (Aug 2026 coverage).</strong> Several vendors, when confronted, said ad-tracking code present on their general commercial site was absent from the logged-in student version. Seven vendors clarified their DPAs applied only to paid tiers — students on free versions had no contractual privacy protection despite districts believing a DPA was in force.
   </div>
 
-  <h2>H.B. 55 — the resulting law</h2>
+  <h2 id="law">H.B. 55 — the resulting law</h2>
   <p>Rep. Tiara Auxier (R-Morgan) is the primary sponsor of H.B. 55, "Privacy Compliance for Education Technology Vendors," effective July 1, 2026. It mandates stricter privacy terms, audits, and contract termination for vendor non-compliance, and amended §53E-9-309(2)(a) — the same statute already flagged in the Gemini/Tooele DPA case file.</p>
 
-  <h2>The loophole underneath both stories</h2>
+  <h2 id="loophole">The loophole underneath both stories</h2>
   <p>Utah's implementing rule, R277-487-7(5), lets vendors satisfy the audit requirement through self-assessment, a district questionnaire, or a SOC2/SOC3 report — a true onsite audit only happens if the vendor agrees to it. That's a structural gap independent of any single vendor, and it applies equally to the hundreds of EdTech apps in this study and to Google's own Gemini contract.</p>
 
-  <h2>District app counts from this study</h2>
+  <h2 id="counts">District app counts from this study</h2>
   <p>The report's own Table 1 lists how many EdTech apps each Utah LEA reported using as of summer 2023. These are the source for the app counts shown on the Education docket:</p>
   <table class="district-apps">
     <thead><tr><th>District</th><th>Apps reported</th></tr></thead>
@@ -176,10 +282,10 @@
     </tbody>
   </table>
 
-  <h2>How this connects to the Gemini/Tooele story</h2>
+  <h2 id="gemini">How this connects to the Gemini/Tooele story</h2>
   <p>Google Gemini does not appear anywhere in this study's tested apps or app list — data collection ran 2023 through August 2025, before Gemini for Education existed in Utah schools (June 2026). Other Google products (Classroom, Workspace, Drive, Docs, Slides, Forms, Sites, Sheets) do appear, confirming Tooele and other districts were already Google Workspace customers before the Gemini rollout. See the <a href="tooele-county-sd.html">Tooele County SD case file</a> for that separate story.</p>
 
-  <h2>Questions worth asking</h2>
+  <h2 id="ask">Questions worth asking</h2>
   <ul>
     <li>Why does USBE's own policy let a vendor's name be redacted just for "responding adequately" to an inquiry — protecting the worst data-sharing vendors from public identification while only naming the one that didn't cooperate?</li>
     <li>If the average signed DPA specifies only 3 of 79 possible data elements, what is a district actually agreeing to when it signs one?</li>
@@ -187,7 +293,8 @@
     <li>If a vendor's DPA only covers its paid tier, how would a parent or teacher know their students are using the unprotected free version instead?</li>
   </ul>
 
-  <details class="sources">
+<section class="hs-sec" id="updates"><h2>Updates since this was posted</h2><p>News and records found online, with dates. Earlier entries are not changed.</p><ul class="hs-upd"><li><span class="d">Oct. 18, 2026</span>Page redone to match the other Utah Hive Politics repos: new colors, short version, plain-words page, dated updates and reader questions. No earlier text was removed.<span class="s">Source: The Weber County Hive</span></li><li><span class="d">Oct. 18, 2026 (record check)</span>The state rule R277-487 still lets a vendor meet the audit requirement with a self-assessment or an industry audit report such as SOC2 or SOC3. USBE&rsquo;s rules page lists its last change as July 8, 2025, before H.B. 55 took effect July 1, 2026; no amendment was listed.<span class="s">Source: <a href="https://www.schools.utah.gov/adminrules/R277-487" target="_blank" rel="noopener">USBE, R277-487 rule page</a></span></li><li><span class="d">Sept. 4, 2026 (record found Oct. 18, 2026)</span>The board&rsquo;s Standards and Assessment Committee gave preliminary approval to a &ldquo;Utah Instructional Technology and Artificial Intelligence Model Policy&rdquo; for districts to use when writing their own AI policies, and to creating an Artificial Intelligence Student Task Force. The final full-board action on both has not been checked yet.<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></span></li><li><span class="d">Aug. 6, 2026 (record found Oct. 18, 2026)</span>The State Board of Education approved a new rule, R277-334, Classroom Technology, to carry out H.B. 273. Per the board&rsquo;s meeting summary, it requires districts and charter schools to adopt policies on technology and AI use, train educators and &ldquo;ensure parent transparency and student protections.&rdquo;<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026</a></span></li><li><span class="d">Aug. 18, 2026 (found Oct. 18, 2026)</span>KSL reported that vendors found out of compliance could fix problems through a reconciliation process with USBE, after which their names came off the non-compliance list. KSL also reported that H.B. 55 requires a contract to be ended if a privacy violation is not fixed within 30 days.<span class="s">Source: <a href="https://www.ksl.com/article/51611276/how-a-byu-study-led-utah-lawmakers-to-pass-a-student-data-privacy-law" target="_blank" rel="noopener">KSL, Logan Stefanich, Aug. 18, 2026</a></span></li></ul></section><section class="hs-sec" id="whom"><h2>Questions to ask, and whom to ask</h2><div class="hs-qa"><div><b>Your district&rsquo;s technology or student data office</b>Does our district use any of the free versions of apps whose privacy agreements cover only the paid version?</div><div><b>Rep. Tiara Auxier, primary sponsor of H.B. 55</b>How will the new audit rights work when the state rule still allows a vendor to self-assess?</div><div><b>Your local school board</b>Has our district signed on to the state&rsquo;s Google Gemini agreement, and was it discussed or voted on in a public meeting? Which EdTech apps does our district use, and which have a signed data privacy agreement?</div><div><b>Utah State Board of Education, student data privacy team</b>Which districts and charter schools have opted in to the statewide Google agreement, and is that agreement posted publicly? St. George News listed the team&rsquo;s contact as privacy@schools.utah.gov.</div><div><b>Your state representative and senator</b>The state rule (R277-487-7(5)) lets vendors meet the audit requirement with a self-assessment. Should a true outside audit be required?</div></div></section><section class="hs-sec" id="connected"><h2>Connected Hive work</h2><div class="hs-cards"><a href="tooele-county-sd.html"><b>Tooele County SD: The Gemini deployment</b><span>The Google AI contract a Utah district signed in June 2026.</span></a><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html"><b>H.B. 273, Classroom Technology Amendments</b><span>Bill-Tracker case file: how the classroom tech standard was loosened by a Senate floor amendment.</span></a><a href="https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch-part-2.html#case7"><b>Bills That Did the Opposite, Case 7</b><span>H.B. 273 in the bait-and-switch series: &ldquo;designed for&rdquo; became &ldquo;demonstrated to have value.&rdquo;</span></a></div></section><section class="hs-sec" id="behind"><h2>Behind this piece</h2><div class="hs-counter"><div><div class="n">12</div><div class="l">Sources listed</div></div><div><div class="n">100</div><div class="l">Apps covered by the study</div></div><div><div class="n">5</div><div class="l">District app counts pulled</div></div><div><div class="n">4</div><div class="l">Laws and rules cited</div></div></div><p class="hs-note2">Posted Sept. 9, 2026. Redone Oct. 18, 2026 with one news report and three public records added; nothing earlier was removed.</p></section>
+  <details class="sources" id="sources">
     <summary>Sources</summary>
     <ol>
       <li>"Utah EdTech App Data Collection and Sharing: 2023-25 Investigation," USBE/BYU/Internet Safety Labs, dated August 20, 2025 — schools.utah.gov/studentdataprivacy</li>
@@ -197,12 +304,14 @@
       <li>August 2026 press coverage of the report's public release, incl. vendor follow-up statements</li>
       <li>askbeforeyouapp.com/ecosystem/ut — public tracking resource for Utah's EdTech statutory scheme</li>
     </ol>
+<p style="margin:14px 0 6px;font-weight:600;font-size:14px;">Links and news added Oct. 18, 2026</p><ol><li><a href="https://le.utah.gov/~2026/bills/static/HB0055.html" target="_blank" rel="noopener">H.B. 55 (2026), Privacy Compliance for Education Technology Vendors, le.utah.gov</a></li><li><a href="https://www.ksl.com/article/51611276/how-a-byu-study-led-utah-lawmakers-to-pass-a-student-data-privacy-law" target="_blank" rel="noopener">KSL, &ldquo;How a BYU study led Utah lawmakers to pass a student data privacy law,&rdquo; Aug. 18, 2026</a></li><li><a href="https://www.schools.utah.gov/adminrules/R277-487" target="_blank" rel="noopener">USBE, R277-487 rule page (checked Oct. 18, 2026)</a></li><li><a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026</a></li><li><a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></li><li><a href="https://schools.utah.gov/studentdataprivacy" target="_blank" rel="noopener">USBE Student Data Privacy page, schools.utah.gov/studentdataprivacy</a></li></ol>
   </details>
 </main>
 
 <footer>
   Part of the <a href="index.html">Education docket</a> at <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>. Corrections and documentation welcome.
 </footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
 
 <script>
   document.querySelectorAll(".flip-card").forEach(card=>{
@@ -214,6 +323,14 @@
   });
 </script>
 
+<script>document.querySelectorAll('.hs-flip').forEach(f=>f.addEventListener('click',()=>f.setAttribute('aria-expanded',f.getAttribute('aria-expanded')==='true'?'false':'true')));</script>
+<script>
+(function(){
+document.querySelectorAll('.ix-tl button').forEach(function(b){b.addEventListener('click',function(){var li=b.parentNode;var o=li.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});});
+document.querySelectorAll('.ix-tabwrap').forEach(function(w){var tabs=w.querySelectorAll('.ix-tabs button');var panels=w.querySelectorAll('.ix-panel');tabs.forEach(function(t,i){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');});panels.forEach(function(p){p.hidden=true;});t.setAttribute('aria-selected','true');panels[i].hidden=false;});});});
+document.querySelectorAll('.ix-barset').forEach(function(w){var bs=w.querySelectorAll('.ix-bars button');var d=w.querySelector('.ix-detail');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');d.innerHTML=b.getAttribute('data-detail');});});});
+})();
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

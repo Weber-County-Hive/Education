@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tooele County SD — Education — The Weber County Hive</title>
+<link rel="icon" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#f5f1e6; --paper-line:#e4ddc9;
-    --chalk:#24372c; --chalk-soft:#3a4f42;
-    --brass:#b8933f; --rust:#a13f2b;
-    --ink:#2a2a24; --ink-soft:#5c5a4e;
+  :root{--paper:#FFFFFF; --paper-line:#CDE5D4;
+    --chalk:#14532D; --chalk-soft:#166534;
+    --brass:#22C55E; --rust:#15803D;
+    --ink:#1F2937; --ink-soft:#4B5563;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
@@ -23,7 +23,7 @@
   .band-inner{max-width:760px;margin:0 auto;}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--brass);}
   h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);margin:12px 0 14px;letter-spacing:-0.01em;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#c8d0c9;margin-top:8px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:#DCFCE7;margin-top:8px;}
 
   main{max-width:760px;margin:0 auto;padding:36px 24px 24px;}
 
@@ -45,7 +45,7 @@
   .flip-card-front .term{
     font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:500;color:var(--chalk-soft);
   }
-  .flip-card-front .tap-hint{font-size:12.5px;color:#a6a294;margin-top:10px;}
+  .flip-card-front .tap-hint{font-size:12.5px;color:#6B7280;margin-top:10px;}
   .flip-card-back{
     background:var(--chalk);color:var(--paper);transform:rotateY(180deg);
   }
@@ -74,9 +74,109 @@
   details.sources li{font-size:13.5px;margin-bottom:8px;color:var(--ink-soft);}
 
   footer{max-width:760px;margin:40px auto 0;padding:20px 24px 50px;font-size:13px;color:var(--ink-soft);border-top:1px solid var(--paper-line);}
+
+/* Utah Hive Politics uniform layout, added Oct. 18, 2026 */
+html{scroll-behavior:smooth}
+.eyebrow,.repo-eyebrow{color:#BBF7D0 !important}
+.stat .num{color:#86EFAC !important}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+.hs-date{font-family:"IBM Plex Mono",monospace;font-size:13px;color:#DCFCE7;margin:14px 0 0}
+.hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:#F0FDF4;border:1px dashed #15803D;padding:14px 18px;margin:0 0 22px;font-size:16px}
+.hs-btn{display:inline-block;background:#14532D;color:#fff !important;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:6px;border:0 !important}
+.hs-short{background:#F0FDF4;border:1px solid #CDE5D4;border-left:6px solid #14532D;padding:18px 22px;margin:0 0 22px}
+.hs-short b.h{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:20px;color:#14532D;margin-bottom:8px}
+.hs-short ul{margin:0;padding-left:20px}
+.hs-short li{margin-bottom:8px;font-size:16px}
+.hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.hs-toc b{width:100%;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563}
+.hs-toc a{font-size:14px;padding:7px 12px;border:1px solid #CDE5D4;background:#fff;color:#1F2937;text-decoration:none;border-radius:999px}
+.hs-toc a:hover{border-color:#15803D}
+.hs-pages{background:#fff;border:1px solid #CDE5D4;padding:12px 18px;margin:0 0 30px}
+.hs-pages summary{cursor:pointer;font-weight:600;color:#14532D}
+.hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 18px}
+.hs-pages li{font-size:15px;line-height:1.35;margin:0}
+.hs-pages li.cur{font-weight:700}
+.hs-pages li.cur a{color:#1F2937;text-decoration:none}
+.hs-pages small{display:block;font-size:13px;color:#4B5563;font-weight:normal}
+.hs-sec{margin-top:40px}
+.hs-sec h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#14532D}
+.hs-upd{list-style:none;padding:0;margin:0;border-left:3px solid #22C55E}
+.hs-upd li{position:relative;padding:0 0 16px 18px;font-size:15.5px}
+.hs-upd li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid #15803D}
+.hs-upd .d{display:block;font-weight:700;color:#14532D;font-size:14px}
+.hs-upd .s{display:block;font-size:13.5px;color:#4B5563;margin-top:3px}
+.hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.hs-flip{text-align:left;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;cursor:pointer;font:inherit;color:#1F2937;min-height:96px}
+.hs-flip .ft{font-weight:700;font-size:18px}
+.hs-flip .fh{font-size:12.5px;color:#4B5563;margin-top:6px}
+.hs-flip .fd{display:none;margin-top:8px;font-size:15px}
+.hs-flip[aria-expanded="true"] .fd{display:block}
+.hs-flip[aria-expanded="true"] .fh{display:none}
+.hs-qa{display:grid;gap:10px}
+.hs-qa div{background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:15.5px}
+.hs-qa b{display:block;font-size:14px;color:#14532D;margin-bottom:4px}
+.hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.hs-cards a{display:block;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;text-decoration:none;color:#1F2937}
+.hs-cards a b{display:block;margin-bottom:4px}
+.hs-cards a span{font-size:14px;color:#4B5563}
+.hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.hs-counter div{background:#14532D;color:#fff;padding:14px;text-align:center}
+.hs-counter .n{font-size:28px;font-weight:700}
+.hs-counter .l{font-size:13px}
+.hs-note2{font-size:14px;color:#4B5563;margin-top:14px}
+.hs-corr{background:#FFFBEB;border-left:4px solid #B45309;padding:12px 16px;margin:0 0 30px;font-size:15px}
+.hs-corr b{color:#78350F}
+.hs-wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* interactive pieces, added Oct. 18, 2026 */
+.ix-hint{font-size:14px;color:#4B5563;margin:0 0 12px}
+.ix-tl{list-style:none;margin:0;padding:0;border-left:4px solid #22C55E}
+.ix-tl li{position:relative;margin:0 0 10px 0;padding-left:20px}
+.ix-tl li::before{content:"";position:absolute;left:-11px;top:14px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid #15803D}
+.ix-tl li.hot::before{background:#15803D}
+.ix-tl button{display:block;width:100%;text-align:left;background:#fff;border:1px solid #CDE5D4;border-radius:6px;padding:12px 14px;font:inherit;cursor:pointer;color:#1F2937}
+.ix-tl button:hover,.ix-tl button[aria-expanded="true"]{border-color:#15803D;background:#F0FDF4}
+.ix-tl .d{display:block;font-weight:700;color:#14532D;font-size:15px}
+.ix-tl .t{display:block;font-size:16px;margin-top:2px}
+.ix-tl .more{display:none;padding:10px 14px 4px;font-size:15.5px}
+.ix-tl .more .s{display:block;font-size:13.5px;color:#4B5563;margin-top:6px}
+.ix-tl li.open .more{display:block}
+.ix-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ix-tabs button{font:inherit;font-size:15px;padding:9px 14px;border:1px solid #CDE5D4;background:#fff;border-radius:999px;cursor:pointer;color:#1F2937}
+.ix-tabs button[aria-selected="true"]{background:#14532D;color:#fff;border-color:#14532D}
+.ix-panel{background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:16px 18px}
+.ix-panel h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#14532D}
+.ix-panel .lab{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563;margin:12px 0 4px;font-weight:600}
+.ix-panel p{margin:0 0 8px}
+.ix-ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 4px}
+.ix-ba div{border:1px solid #CDE5D4;padding:10px 12px;border-radius:6px;font-size:16px}
+.ix-ba .b{background:#F9FAFB}
+.ix-ba .af{background:#F0FDF4;border-color:#15803D}
+.ix-ba small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#4B5563;margin-bottom:4px}
+@media(max-width:560px){.ix-ba{grid-template-columns:1fr}}
+.ix-bars{display:grid;gap:10px}
+.ix-bars button{display:grid;grid-template-columns:minmax(110px,32%) 1fr;align-items:center;gap:10px;background:none;border:0;padding:4px 0;font:inherit;cursor:pointer;text-align:left;color:#1F2937}
+.ix-bars .lb{text-align:right;font-size:16px}
+.ix-bars .tr{display:flex;align-items:center;background:#F0FDF4;border-radius:4px;min-height:34px}
+.ix-bars .fl{height:34px;background:#15803D;border-radius:4px 0 0 4px;flex-shrink:0}
+.ix-bars button[aria-pressed="true"] .fl{background:#14532D}
+.ix-bars .v{margin-left:10px;font-weight:700;font-size:17px}
+.ix-detail{margin-top:12px;background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:16px;min-height:24px}
+#ix-map{height:440px;border:1px solid #CDE5D4;border-radius:6px;margin-bottom:8px}
+.ix-mapnote{font-size:13.5px;color:#4B5563;margin:0 0 30px}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="breadcrumb"><a href="index.html">← Education docket</a></div>
 
@@ -89,11 +189,13 @@
       <span>Tooele DPA signed: June 11, 2026</span>
       <span>Board vote: none held</span>
     </div>
+    <p class="hs-date">Posted Sept. 9, 2026 · Updated Oct. 18, 2026</p>
   </div>
 </header>
 
 <main>
-  <div class="glossary">
+<div class="hs-plain">New to this? <a class="hs-btn" href="weber-hive-education-plain.html">Read it in plain words</a> About 800 words, with one simple chart.</div><div class="hs-short" id="short"><b class="h">Short version</b><ul><li>On June 3, 2026, the Utah State Board of Education (USBE) announced Google Gemini for Education for Utah public schools. News reports and USBE say each district decides whether to use it.</li><li>Tooele County School District signed the Google Data Processing Agreement (DPA) on June 11, 2026.</li><li>USBE&rsquo;s records response showed no documentation for three state-law requirements. The H.B. 273 requirements took effect July 1, 2026, after the signing.</li><li>The contract lets Google change what is covered, and which companies can see student data, by updating its own webpages. It also lengthens the data-deletion window from 60 to 180 days.</li><li>No Tooele board agenda item or minutes naming Google, Gemini or the DPA has been found for the June 9 or June 16 meetings.</li></ul></div><nav class="hs-toc" aria-label="On this page"><b>On this page</b><a href="#happened">What happened</a><a href="#law">What state law required</a><a href="#timeline">The timeline</a><a href="#contract">What the contract does</a><a href="#clauses">Clause explorer</a><a href="#board">Board record</a><a href="#updates">Updates since this was posted</a><a href="#words">Words to know</a><a href="#ask">Questions to ask</a><a href="#connected">Connected Hive work</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav><details class="hs-pages"><summary>Education pages (4) · tap to open</summary><ol><li><a href="index.html">Education docket</a><small>Every district we track, searchable</small></li><li><a href="weber-hive-education-plain.html">In plain words</a><small>The short, simple version of both case files</small></li><li class=cur><a href="tooele-county-sd.html">Tooele County SD: The Gemini deployment</a><small>Google AI contract, June 2026</small></li><li><a href="weber-hive-hb55-edtech-privacy.html">What 100 apps actually send</a><small>The BYU study and H.B. 55</small></li></ol></details>
+  <div class="glossary" id="words">
     <div class="flip-card" tabindex="0" role="button" aria-label="Definition of DPA">
       <div class="flip-card-inner">
         <div class="flip-card-front">
@@ -122,6 +224,7 @@
     <p><strong>New here?</strong> In June 2026, Utah's State Board of Education rolled out Google Gemini to roughly 680,000 K-12 students — without a vote from the elected 15-member Board, and without the safety review, parental notice, or audit terms state law requires. Tooele County School District signed the underlying Google contract on June 11.</p>
     <p>This case file covers what the contract itself says, what state law required at the time, and what the district's own records do — and don't — show.</p>
   </div>
+<div class="hs-corr"><b>Note added Oct. 18, 2026:</b> The box above says the rollout went ahead &ldquo;without the safety review, parental notice, or audit terms state law requires.&rdquo; As the &ldquo;Timing matters here&rdquo; note further down explains, the H.B. 273 safety-review and parental-notice rules took effect July 1, 2026, after the June 3 announcement. News reports (<a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER</a>, <a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News</a>) also describe Gemini as optional for each district, so &ldquo;rolled out to roughly 680,000 students&rdquo; means it was offered statewide, not that every student received it. The original wording is kept above.</div>
 
   <div class="stat-strip">
     <div class="stat-cell"><span class="num">3</span><span class="label">Statutory requirements USBE's own records show weren't documented</span></div>
@@ -129,14 +232,16 @@
     <div class="stat-cell"><span class="num">180</span><span class="label">Days Google's contract allows to delete student data, up from 60</span></div>
   </div>
 
-  <h2>What happened</h2>
+  <h2 id="happened">What happened</h2>
   <p>On June 3, 2026, State Superintendent Molly Hart and USBE AI Specialist Matt Winters announced Google Gemini for Education would be made available across Utah's public schools — without informing or getting a vote from the elected Board, and without a procurement process, privacy review, or parental-notification framework in place beforehand. Tooele County School District signed the Google Data Processing Agreement (DPA) governing the deployment eight days later, on June 11.</p>
 
   <div class="callout callout-note">
     <strong>What this case file does and doesn't establish.</strong> USBE's June 3 announcement made Gemini available statewide, to all Utah K-12 students — but availability isn't adoption. Only Tooele's signed DPA has been obtained and confirmed here. Whether other districts have signed the same contract, a variant of it, or nothing at all is not yet known. Treat the findings on this page as specific to Tooele's own agreement unless another district's contract is separately confirmed.
   </div>
 
-  <h2>What state law required</h2>
+  <h2 id="timeline">The timeline</h2><p class="ix-hint">Tap a date to see what happened and where it comes from. Filled dots mark the two dates this case file turns on.</p><ul class="ix-tl"><li class=""><button aria-expanded="false"><span class="d">Mar. 4, 2026</span><span class="t">Senate changes the classroom tech standard in H.B. 273</span></button><div class="more">Senate Floor Amendment 5 changed the standard from software &ldquo;designed specifically for instructional use&rdquo; to software &ldquo;demonstrated to have significant educational value.&rdquo; The Senate passed the bill 17-9-3.<span class="s">Source: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html" target="_blank" rel="noopener">Hive Bill-Tracker, H.B. 273 case file</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Mar. 18, 2026</span><span class="t">Governor signs H.B. 273</span></button><div class="more">Its safety-review and parent-notice rules were set to take effect July 1, 2026.<span class="s">Source: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html" target="_blank" rel="noopener">Hive Bill-Tracker, H.B. 273 case file</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Apr. 21, 2026</span><span class="t">Tooele board: Policy 5031, 1st read</span></button><div class="more">The board&rsquo;s agenda lists &ldquo;Revised Policy 5031, Personal Technology and Communication Devices, 1st Read.&rdquo; This is the student device and AI-glasses policy, not the Google contract.<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1415901.pdf" target="_blank" rel="noopener">Tooele board agenda, Apr. 21, 2026</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">May 12, 2026</span><span class="t">Tooele board: Policy 5031, 2nd read</span></button><div class="more">Agenda item 7.9.<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1428717.pdf" target="_blank" rel="noopener">Tooele board agenda, May 12, 2026</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">June 2&ndash;3, 2026</span><span class="t">USBE announces Gemini for Education</span></button><div class="more">USBE said local education agencies &ldquo;maintain full discretion over whether to implement&rdquo; it, for about 680,000 students.<span class="s">Source: <a href="https://www.schools.utah.gov/publicrelations/_publicrelations_/_2026/USBEAdoptsGeminiEducationPressRelease.pdf" target="_blank" rel="noopener">USBE news release</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">June 9, 2026</span><span class="t">Tooele board meets</span></button><div class="more">The posted agenda lists no item naming Google, Gemini, AI or a data privacy agreement (searched as text).<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1436281.pdf" target="_blank" rel="noopener">Tooele board agenda, June 9, 2026</a></span></div></li><li class="hot"><button aria-expanded="false"><span class="d">June 11, 2026</span><span class="t">Tooele signs the Google data agreement</span></button><div class="more">Tooele County School District signed the Google Data Processing Agreement covered on this page.<span class="s">Source: Signed Google Data Processing Agreement, June 11, 2026</span></div></li><li class="hot"><button aria-expanded="false"><span class="d">July 1, 2026</span><span class="t">H.B. 273 rules take effect</span></button><div class="more">The safety-review and written parent-notice requirements apply from this date.<span class="s">Source: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html" target="_blank" rel="noopener">Hive Bill-Tracker, H.B. 273 case file</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">July 2, 2026</span><span class="t">Board member: no district is required to sign on</span></button><div class="more">St. George News quoted board member Joann Brinton saying the contract was first developed for one district that wanted a stronger privacy agreement with Google. The article does not name the district.<span class="s">Source: <a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Aug. 6, 2026</span><span class="t">USBE approves rule R277-334, Classroom Technology</span></button><div class="more">The rule carries out H.B. 273. It requires districts to adopt technology and AI policies and train educators.<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Aug. 11, 2026</span><span class="t">Tooele board meets again</span></button><div class="more">The agenda and the minutes list no Google, Gemini, AI or data agreement item (searched as text).<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1470455.pdf" target="_blank" rel="noopener">agenda</a>, <a href="https://www.utah.gov/pmn/files/1485841.pdf" target="_blank" rel="noopener">minutes</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Sept. 4, 2026</span><span class="t">USBE committee backs a model AI policy</span></button><div class="more">Preliminary approval for a model AI policy for districts and an AI Student Task Force. Final board action not yet checked.<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></span></div></li><li class=""><button aria-expanded="false"><span class="d">Oct. 7, 2026</span><span class="t">Districts are choosing differently</span></button><div class="more">KSL: Canyons turned Gemini on for teachers, staff and high school students; Provo kept it off student Chromebooks while writing its AI policy.<span class="s">Source: <a href="https://www.ksl.com/article/51633703/how-utah-students-use-ai-in-school-depends-on-where-they-go" target="_blank" rel="noopener">KSL, Oct. 7, 2026</a></span></div></li></ul>
+
+  <h2 id="law">What state law required</h2>
   <p>Three statutes bear on a rollout like this. Records USBE released in response to a records request show none of the required documentation existed for any of them:</p>
   <ul>
     <li><strong>§53G-7-228(2)(a)</strong> — requires an evidence-based safety review before instructional technology is deployed.</li>
@@ -147,7 +252,7 @@
     <strong>Timing matters here.</strong> H.B. 273, the 2026 law creating the safety-review and parental-notice requirements above, did not take effect until July 1, 2026 — about a month after the June 3 announcement and three weeks after Tooele's DPA was signed. Whether the announcement itself broke a law that wasn't yet in effect is a different question from whether classroom use after July 1 complies with it. Both questions are live; neither is settled here.
   </div>
 
-  <h2>What the contract itself does</h2>
+  <h2 id="contract">What the contract itself does</h2>
   <p>The Tooele DPA's terms consistently favor Google over the district that signed it:</p>
   <ul>
     <li>Covered services are defined by reference to a Google-controlled webpage — meaning Google can expand what's covered, including adding Gemini features, without a new contract or a board vote.</li>
@@ -158,11 +263,13 @@
     <li>No geographic limit exists on where student data may be stored — the contract allows processing "in any country where Google or its Subprocessors maintain facilities."</li>
   </ul>
 
-  <h2>Tooele's own board record</h2>
+  <h2 id="clauses">Explore the contract, clause by clause</h2><div class="ix-tabwrap"><p class="ix-hint">Tap a clause to see what the contract says and why it matters.</p><div class="ix-tabs" role="tablist"><button role="tab" aria-selected="true">Covered services</button><button role="tab" aria-selected="false">Subprocessors</button><button role="tab" aria-selected="false">Deleting data</button><button role="tab" aria-selected="false">Breach notice</button><button role="tab" aria-selected="false">Audits</button><button role="tab" aria-selected="false">Where data is stored</button><button role="tab" aria-selected="false">What USBE says</button></div><div class="ix-panel" role="tabpanel"><h3>What the contract covers</h3><span class="lab">What the contract says</span><p>Covered services are defined as the Google Workspace for Education products listed on a Google webpage &ldquo;(or a successor URL).&rdquo; (Exhibit A)</p><span class="lab">Why it matters</span><p>Google controls that webpage. Products added to it, such as new Gemini features, can fall under the contract without a new contract or a board vote.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement, Exhibit A</p></div><div class="ix-panel" role="tabpanel" hidden><h3>Which other companies can see the data</h3><span class="lab">What the contract says</span><p>The list of subprocessors, the other companies that may handle student data, is also kept on a Google webpage. (Exhibit G, Section 2)</p><span class="lab">Why it matters</span><p>Google can change who has access to student data by updating its own page.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement, Exhibit G</p></div><div class="ix-panel" role="tabpanel" hidden><h3>How long before student data is deleted</h3><span class="lab">What the contract says</span><p>A Google-written amendment changed the deletion window after the contract ends. (Exhibit H, Section 4.6)</p><span class="lab">Before and after</span><div class="ix-ba"><div class="b"><small>Before</small>60 days</div><div class="af"><small>After</small>180 days</div></div><span class="lab">Why it matters</span><p>Student data can stay with Google three times as long after the district ends the contract.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement, Exhibit H</p></div><div class="ix-panel" role="tabpanel" hidden><h3>When the district is told about a breach</h3><span class="lab">What the contract says</span><p>The fixed 72-hour notice was replaced with notice &ldquo;promptly and without undue delay.&rdquo; (Exhibit H, Section 5.4)</p><span class="lab">Before and after</span><div class="ix-ba"><div class="b"><small>Before</small>72 hours, called a &ldquo;Data Breach&rdquo;</div><div class="af"><small>After</small>&ldquo;Promptly and without undue delay,&rdquo; called a &ldquo;Data Incident&rdquo;</div></div><span class="lab">Why it matters</span><p>There is no longer a set deadline in the contract.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement, Exhibit H</p></div><div class="ix-panel" role="tabpanel" hidden><h3>Who can check Google&rsquo;s compliance</h3><span class="lab">What the contract says</span><p>Google &ldquo;may charge a fee&rdquo; for any audit and may object to an auditor who is a competitor or &ldquo;manifestly unsuitable.&rdquo; (Exhibit G, Section 1)</p><span class="lab">Why it matters</span><p>The district pays to check, and Google can object to who checks. The state rule (R277-487-7(5)) also lets vendors self-assess.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement, Exhibit G; <a href="https://www.schools.utah.gov/adminrules/R277-487" target="_blank" rel="noopener">R277-487</a></p></div><div class="ix-panel" role="tabpanel" hidden><h3>Where student data can be kept</h3><span class="lab">What the contract says</span><p>Student data may be processed &ldquo;in any country where Google or its Subprocessors maintain facilities.&rdquo;</p><span class="lab">Why it matters</span><p>The contract sets no geographic limit.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563">Google Data Processing Agreement</p></div><div class="ix-panel" role="tabpanel" hidden><h3>The state&rsquo;s side</h3><span class="lab">What the contract says</span><p>USBE says data and conversations in Gemini for Education are not used to train AI models, and schools keep administrative control of their data.</p><span class="lab">Why it matters</span><p>This is the protection USBE points to. It is stated in USBE&rsquo;s release, not in the clauses above.</p><span class="lab">Where it is</span><p style="font-size:14px;color:#4B5563"><a href="https://www.schools.utah.gov/publicrelations/_publicrelations_/_2026/USBEAdoptsGeminiEducationPressRelease.pdf" target="_blank" rel="noopener">USBE news release, June 2&ndash;3, 2026</a>; <a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER, June 11, 2026</a></p></div></div>
+
+  <h2 id="board">Tooele's own board record</h2>
   <p>No agenda item or minutes entry naming Google, Gemini, or the DPA has been found around Tooele's June 9 or June 16, 2026 board meetings — the deployment may have gone through administratively rather than as a board agenda item.</p>
   <p>Tooele's Policy 5031 (Personal Technology and Communication Devices), rewritten in 2026, separately added AI-glasses regulation. Its definition of "AI glasses" closely mirrors the definition later written into state code by H.B. 44 — consistent with district staff aligning the policy to state code, as the district's own stated rationale holds.</p>
 
-  <h2>Questions worth asking</h2>
+  <h2 id="ask">Questions worth asking</h2>
   <ul>
     <li>Have other Utah school districts signed this same Google DPA, a variant of it, or nothing at all? So far only Tooele's has been confirmed.</li>
     <li>A Washington County board member described "the option of a state contract" districts can opt into — is that Tooele's own agreement functioning as the statewide template, or a separate master agreement that hasn't been obtained yet?</li>
@@ -170,7 +277,8 @@
     <li>Does your district's board have a public record of voting on, or even discussing, a Gemini/Google AI deployment? Tooele's doesn't appear to.</li>
   </ul>
 
-  <details class="sources">
+<section class="hs-sec" id="updates"><h2>Updates since this was posted</h2><p>News and records found online, with dates. Earlier entries are not changed.</p><ul class="hs-upd"><li><span class="d">Oct. 18, 2026</span>Page redone to match the other Utah Hive Politics repos: new colors, short version, plain-words page, dated updates and reader questions. No earlier text was removed.<span class="s">Source: The Weber County Hive</span></li><li><span class="d">Oct. 18, 2026 (record check)</span>Tooele County School District board agendas on the Utah Public Notice Website for April 21, May 12, June 9 and Aug. 11, 2026, and the Aug. 11 minutes, list no item naming Google, Gemini, artificial intelligence or a data privacy agreement. Policy 5031 had its 1st read April 21 and 2nd read May 12, 2026. Read by text search of the posted PDFs; the July 28 work session and the meetings after Aug. 11 have not been checked yet.<span class="s">Source: <a href="https://www.utah.gov/pmn/files/1415901.pdf" target="_blank" rel="noopener">Apr. 21 agenda</a>, <a href="https://www.utah.gov/pmn/files/1428717.pdf" target="_blank" rel="noopener">May 12 agenda</a>, <a href="https://www.utah.gov/pmn/files/1436281.pdf" target="_blank" rel="noopener">June 9 agenda</a>, <a href="https://www.utah.gov/pmn/files/1470455.pdf" target="_blank" rel="noopener">Aug. 11 agenda</a>, <a href="https://www.utah.gov/pmn/files/1485841.pdf" target="_blank" rel="noopener">Aug. 11 minutes</a></span></li><li><span class="d">Oct. 7, 2026</span>KSL reported that Canyons School District turned Gemini on for teachers, staff and high school students only, with a red-yellow-green rule for when AI may be used on assignments. Provo City School District told parents Gemini and other AI chatbots are not available on student Chromebooks while it finishes its AI policy.<span class="s">Source: <a href="https://www.ksl.com/article/51633703/how-utah-students-use-ai-in-school-depends-on-where-they-go" target="_blank" rel="noopener">KSL, Eric Cabrera, Oct. 7, 2026</a></span></li><li><span class="d">Sept. 4, 2026 (record found Oct. 18, 2026)</span>The board&rsquo;s Standards and Assessment Committee gave preliminary approval to a &ldquo;Utah Instructional Technology and Artificial Intelligence Model Policy&rdquo; for districts to use when writing their own AI policies, and to creating an Artificial Intelligence Student Task Force. The final full-board action on both has not been checked yet.<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></span></li><li><span class="d">Aug. 6, 2026 (record found Oct. 18, 2026)</span>The State Board of Education approved a new rule, R277-334, Classroom Technology, to carry out H.B. 273. Per the board&rsquo;s meeting summary, it requires districts and charter schools to adopt policies on technology and AI use, train educators and &ldquo;ensure parent transparency and student protections.&rdquo;<span class="s">Source: <a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026</a></span></li><li><span class="d">July 2, 2026 (found Oct. 18, 2026)</span>St. George News reported that USBE says no district is required to take part. State board member Joann Brinton said the contract &ldquo;was first developed for a district that wanted a stronger privacy agreement with Google&rdquo;; the article does not name that district. Washington County School District said no students there have Gemini access at school; staff use it under District Policy 3750.<span class="s">Source: <a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News, Nick Fiala, July 2, 2026</a></span></li><li><span class="d">June 11, 2026 (found Oct. 18, 2026)</span>KUER reported that a USBE spokesperson called Gemini for Education &ldquo;an option, not a requirement,&rdquo; and that the state board signed a data privacy agreement with Google meant to apply to every school and district that opts in. How that statewide agreement relates to the Tooele DPA on this page has not been confirmed here.<span class="s">Source: <a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER, Martha Harris, June 11, 2026</a></span></li><li><span class="d">June 2&ndash;3, 2026 (record found Oct. 18, 2026)</span>USBE&rsquo;s own news release, updated June 3, says local education agencies &ldquo;maintain full discretion over whether to implement Google Gemini for Education&rdquo; and puts the number of students at about 680,000.<span class="s">Source: <a href="https://www.schools.utah.gov/publicrelations/_publicrelations_/_2026/USBEAdoptsGeminiEducationPressRelease.pdf" target="_blank" rel="noopener">USBE news release (PDF), June 2, 2026, updated June 3</a></span></li></ul></section><section class="hs-sec" id="whom"><h2>Questions to ask, and whom to ask</h2><div class="hs-qa"><div><b>Tooele County School District board</b>Did the June 11, 2026 Google DPA come before the board? If not, who signed it, and under what authority?</div><div><b>Your local school board</b>Has our district signed on to the state&rsquo;s Google Gemini agreement, and was it discussed or voted on in a public meeting? Which EdTech apps does our district use, and which have a signed data privacy agreement?</div><div><b>Utah State Board of Education, student data privacy team</b>Which districts and charter schools have opted in to the statewide Google agreement, and is that agreement posted publicly? St. George News listed the team&rsquo;s contact as privacy@schools.utah.gov.</div><div><b>Your state representative and senator</b>The state rule (R277-487-7(5)) lets vendors meet the audit requirement with a self-assessment. Should a true outside audit be required?</div></div></section><section class="hs-sec" id="connected"><h2>Connected Hive work</h2><div class="hs-cards"><a href="weber-hive-hb55-edtech-privacy.html"><b>What 100 apps actually send</b><span>The BYU study of EdTech apps and the H.B. 55 law that followed.</span></a><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb273.html"><b>H.B. 273, Classroom Technology Amendments</b><span>Bill-Tracker case file: how the classroom tech standard was loosened by a Senate floor amendment.</span></a><a href="https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch-part-2.html#case7"><b>Bills That Did the Opposite, Case 7</b><span>H.B. 273 in the bait-and-switch series: &ldquo;designed for&rdquo; became &ldquo;demonstrated to have value.&rdquo;</span></a></div></section><section class="hs-sec" id="behind"><h2>Behind this piece</h2><div class="hs-counter"><div><div class="n">17</div><div class="l">Sources listed</div></div><div><div class="n">3</div><div class="l">State laws checked</div></div><div><div class="n">6</div><div class="l">Tooele board records checked</div></div><div><div class="n">1</div><div class="l">Signed contract read</div></div></div><p class="hs-note2">Posted Sept. 9, 2026. Redone Oct. 18, 2026 with news reports and public records added; nothing earlier was removed.</p></section>
+  <details class="sources" id="sources">
     <summary>Sources</summary>
     <ol>
       <li>Google Data Processing Agreement, signed by Tooele County School District, June 11, 2026</li>
@@ -181,12 +289,14 @@
       <li>Tooele County School District Policy 5031, Personal Technology and Communication Devices (2026 revision)</li>
       <li>Tooele County School District board meeting records, June 9 and June 16, 2026</li>
     </ol>
+<p style="margin:14px 0 6px;font-weight:600;font-size:14px;">Links and news added Oct. 18, 2026</p><ol><li><a href="https://utahpolicy.com/news-release/77622-usbe-adopts-gemini-for-education-to-enhance-student-learning-and-teacher-support" target="_blank" rel="noopener">USBE news release, &ldquo;USBE adopts Gemini for Education,&rdquo; as posted by Utah Policy</a></li><li><a href="https://www.schools.utah.gov/publicrelations/_publicrelations_/_2026/USBEAdoptsGeminiEducationPressRelease.pdf" target="_blank" rel="noopener">USBE news release, original PDF on schools.utah.gov</a></li><li><a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/August2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Aug. 6, 2026 (R277-334)</a></li><li><a href="https://www.schools.utah.gov/board/utah/meetings/_meetingsummaries_/September2026BoardSummary.pdf" target="_blank" rel="noopener">USBE Board Summary, Sept. 3&ndash;4, 2026</a></li><li><a href="https://www.ksl.com/article/51633703/how-utah-students-use-ai-in-school-depends-on-where-they-go" target="_blank" rel="noopener">KSL, &ldquo;How Utah students use AI in school depends on where they go,&rdquo; Oct. 7, 2026</a></li><li>Tooele County School District board agendas and minutes, Utah Public Notice Website: <a href="https://www.utah.gov/pmn/files/1415901.pdf" target="_blank" rel="noopener">Apr. 21</a>, <a href="https://www.utah.gov/pmn/files/1428717.pdf" target="_blank" rel="noopener">May 12</a>, <a href="https://www.utah.gov/pmn/files/1436281.pdf" target="_blank" rel="noopener">June 9</a>, <a href="https://www.utah.gov/pmn/files/1470455.pdf" target="_blank" rel="noopener">Aug. 11 agenda</a>, <a href="https://www.utah.gov/pmn/files/1485841.pdf" target="_blank" rel="noopener">Aug. 11 minutes</a></li><li><a href="https://le.utah.gov/~2026/bills/static/HB0273.html" target="_blank" rel="noopener">H.B. 273 (2026), Classroom Technology Amendments, le.utah.gov</a></li><li><a href="https://le.utah.gov/~2026/bills/static/HB0044.html" target="_blank" rel="noopener">H.B. 44 (2026), le.utah.gov</a></li><li><a href="https://www.kuer.org/education/2026-06-11/utah-schools-face-a-choice-do-they-want-to-use-googles-gemini-ai" target="_blank" rel="noopener">KUER, &ldquo;Utah schools face a choice: Do they want to use Google&rsquo;s Gemini AI?&rdquo; June 11, 2026</a></li><li><a href="https://www.stgeorgeutah.com/news/a-lot-of-misinformation-what-utahs-google-ai-agreement-means-for-washington-county-schools/article_c91a0d06-02c9-4392-b676-2473c3bce2c5.html" target="_blank" rel="noopener">St. George News, &ldquo;&lsquo;A lot of misinformation&rsquo;: What Utah&rsquo;s Google AI agreement means for Washington County schools,&rdquo; July 2, 2026</a></li></ol>
   </details>
 </main>
 
 <footer>
   Part of the <a href="index.html">Education docket</a> at <a href="https://webercountyhive.substack.com/">The Weber County Hive</a>. Corrections and documentation welcome.
 </footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
 
 <script>
   document.querySelectorAll(".flip-card").forEach(card=>{
@@ -198,6 +308,14 @@
   });
 </script>
 
+<script>document.querySelectorAll('.hs-flip').forEach(f=>f.addEventListener('click',()=>f.setAttribute('aria-expanded',f.getAttribute('aria-expanded')==='true'?'false':'true')));</script>
+<script>
+(function(){
+document.querySelectorAll('.ix-tl button').forEach(function(b){b.addEventListener('click',function(){var li=b.parentNode;var o=li.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});});
+document.querySelectorAll('.ix-tabwrap').forEach(function(w){var tabs=w.querySelectorAll('.ix-tabs button');var panels=w.querySelectorAll('.ix-panel');tabs.forEach(function(t,i){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');});panels.forEach(function(p){p.hidden=true;});t.setAttribute('aria-selected','true');panels[i].hidden=false;});});});
+document.querySelectorAll('.ix-barset').forEach(function(w){var bs=w.querySelectorAll('.ix-bars button');var d=w.querySelector('.ix-detail');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');d.innerHTML=b.getAttribute('data-detail');});});});
+})();
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
