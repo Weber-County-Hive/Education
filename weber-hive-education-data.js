@@ -81,5 +81,17 @@ const EDUCATION_DISTRICTS = [
     devicePolicy: "Stoplight (red-yellow-green) rule for AI on assignments",
     caseFile: null,
     tags: ["gemini", "device-policy"]
+  },
+  {
+    // added Oct. 18, 2026 — school borrowing case file
+    district: "Box Elder SD",
+    county: "Box Elder",
+    geminiStatus: null,
+    dpaDate: null,
+    appCount: null,
+    appCountYear: null,
+    devicePolicy: null,
+    caseFile: "box-elder-sd-school-borrowing.html",
+    tags: ["bonds"]
   }
 ];
