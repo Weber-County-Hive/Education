@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Connects to Whom: Hope of Utah, Sistema Utah and the Book Lists — Education — The Weber County Hive</title>
+<link rel="icon" href="hive-bee.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#1F2937;font-family:"Inter",sans-serif;line-height:1.6}
+a{color:#15803D}
+.breadcrumb{max-width:820px;margin:0 auto;padding:20px 24px 0;font-size:13px;font-family:"IBM Plex Mono",monospace}
+.breadcrumb a{color:#4B5563;text-decoration:none;border-bottom:1px solid #CDE5D4}
+header.band{background:#14532D;color:#fff;padding:32px 24px 36px;margin-top:16px}
+.band-inner{max-width:820px;margin:0 auto}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);margin:12px 0 10px}
+.dek{font-size:17px;color:#DCFCE7;margin:0;max-width:640px}
+main{max-width:820px;margin:0 auto;padding:30px 24px 24px}
+p,li{font-size:16.5px}
+footer{max-width:820px;margin:30px auto 0;padding:20px 24px 40px;font-size:13px;color:#4B5563;border-top:1px solid #CDE5D4}
+
+/* Utah Hive Politics uniform layout, added Oct. 18, 2026 */
+html{scroll-behavior:smooth}
+.eyebrow,.repo-eyebrow{color:#BBF7D0 !important}
+.stat .num{color:#86EFAC !important}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+.hs-date{font-family:"IBM Plex Mono",monospace;font-size:13px;color:#DCFCE7;margin:14px 0 0}
+.hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:#F0FDF4;border:1px dashed #15803D;padding:14px 18px;margin:0 0 22px;font-size:16px}
+.hs-btn{display:inline-block;background:#14532D;color:#fff !important;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:6px;border:0 !important}
+.hs-short{background:#F0FDF4;border:1px solid #CDE5D4;border-left:6px solid #14532D;padding:18px 22px;margin:0 0 22px}
+.hs-short b.h{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:20px;color:#14532D;margin-bottom:8px}
+.hs-short ul{margin:0;padding-left:20px}
+.hs-short li{margin-bottom:8px;font-size:16px}
+.hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.hs-toc b{width:100%;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563}
+.hs-toc a{font-size:14px;padding:7px 12px;border:1px solid #CDE5D4;background:#fff;color:#1F2937;text-decoration:none;border-radius:999px}
+.hs-toc a:hover{border-color:#15803D}
+.hs-pages{background:#fff;border:1px solid #CDE5D4;padding:12px 18px;margin:0 0 30px}
+.hs-pages summary{cursor:pointer;font-weight:600;color:#14532D}
+.hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 18px}
+.hs-pages li{font-size:15px;line-height:1.35;margin:0}
+.hs-pages li.cur{font-weight:700}
+.hs-pages li.cur a{color:#1F2937;text-decoration:none}
+.hs-pages small{display:block;font-size:13px;color:#4B5563;font-weight:normal}
+.hs-sec{margin-top:40px}
+.hs-sec h2{font-family:"Fraunces",serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#14532D}
+.hs-upd{list-style:none;padding:0;margin:0;border-left:3px solid #22C55E}
+.hs-upd li{position:relative;padding:0 0 16px 18px;font-size:15.5px}
+.hs-upd li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid #15803D}
+.hs-upd .d{display:block;font-weight:700;color:#14532D;font-size:14px}
+.hs-upd .s{display:block;font-size:13.5px;color:#4B5563;margin-top:3px}
+.hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.hs-flip{text-align:left;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;cursor:pointer;font:inherit;color:#1F2937;min-height:96px}
+.hs-flip .ft{font-weight:700;font-size:18px}
+.hs-flip .fh{font-size:12.5px;color:#4B5563;margin-top:6px}
+.hs-flip .fd{display:none;margin-top:8px;font-size:15px}
+.hs-flip[aria-expanded="true"] .fd{display:block}
+.hs-flip[aria-expanded="true"] .fh{display:none}
+.hs-qa{display:grid;gap:10px}
+.hs-qa div{background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:15.5px}
+.hs-qa b{display:block;font-size:14px;color:#14532D;margin-bottom:4px}
+.hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.hs-cards a{display:block;background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:14px 16px;text-decoration:none;color:#1F2937}
+.hs-cards a b{display:block;margin-bottom:4px}
+.hs-cards a span{font-size:14px;color:#4B5563}
+.hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.hs-counter div{background:#14532D;color:#fff;padding:14px;text-align:center}
+.hs-counter .n{font-size:28px;font-weight:700}
+.hs-counter .l{font-size:13px}
+.hs-note2{font-size:14px;color:#4B5563;margin-top:14px}
+.hs-corr{background:#FFFBEB;border-left:4px solid #B45309;padding:12px 16px;margin:0 0 30px;font-size:15px}
+.hs-corr b{color:#78350F}
+.hs-wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+
+/* interactive pieces, added Oct. 18, 2026 */
+.ix-hint{font-size:14px;color:#4B5563;margin:0 0 12px}
+.ix-tl{list-style:none;margin:0;padding:0;border-left:4px solid #22C55E}
+.ix-tl li{position:relative;margin:0 0 10px 0;padding-left:20px}
+.ix-tl li::before{content:"";position:absolute;left:-11px;top:14px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid #15803D}
+.ix-tl li.hot::before{background:#15803D}
+.ix-tl button{display:block;width:100%;text-align:left;background:#fff;border:1px solid #CDE5D4;border-radius:6px;padding:12px 14px;font:inherit;cursor:pointer;color:#1F2937}
+.ix-tl button:hover,.ix-tl button[aria-expanded="true"]{border-color:#15803D;background:#F0FDF4}
+.ix-tl .d{display:block;font-weight:700;color:#14532D;font-size:15px}
+.ix-tl .t{display:block;font-size:16px;margin-top:2px}
+.ix-tl .more{display:none;padding:10px 14px 4px;font-size:15.5px}
+.ix-tl .more .s{display:block;font-size:13.5px;color:#4B5563;margin-top:6px}
+.ix-tl li.open .more{display:block}
+.ix-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ix-tabs button{font:inherit;font-size:15px;padding:9px 14px;border:1px solid #CDE5D4;background:#fff;border-radius:999px;cursor:pointer;color:#1F2937}
+.ix-tabs button[aria-selected="true"]{background:#14532D;color:#fff;border-color:#14532D}
+.ix-panel{background:#fff;border:1px solid #CDE5D4;border-top:5px solid #15803D;padding:16px 18px}
+.ix-panel h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#14532D}
+.ix-panel .lab{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#4B5563;margin:12px 0 4px;font-weight:600}
+.ix-panel p{margin:0 0 8px}
+.ix-ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 4px}
+.ix-ba div{border:1px solid #CDE5D4;padding:10px 12px;border-radius:6px;font-size:16px}
+.ix-ba .b{background:#F9FAFB}
+.ix-ba .af{background:#F0FDF4;border-color:#15803D}
+.ix-ba small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#4B5563;margin-bottom:4px}
+@media(max-width:560px){.ix-ba{grid-template-columns:1fr}}
+.ix-bars{display:grid;gap:10px}
+.ix-bars button{display:grid;grid-template-columns:minmax(110px,32%) 1fr;align-items:center;gap:10px;background:none;border:0;padding:4px 0;font:inherit;cursor:pointer;text-align:left;color:#1F2937}
+.ix-bars .lb{text-align:right;font-size:16px}
+.ix-bars .tr{display:flex;align-items:center;background:#F0FDF4;border-radius:4px;min-height:34px}
+.ix-bars .fl{height:34px;background:#15803D;border-radius:4px 0 0 4px;flex-shrink:0}
+.ix-bars button[aria-pressed="true"] .fl{background:#14532D}
+.ix-bars .v{margin-left:10px;font-weight:700;font-size:17px}
+.ix-detail{margin-top:12px;background:#F0FDF4;border-left:4px solid #15803D;padding:12px 16px;font-size:16px;min-height:24px}
+#ix-map{height:440px;border:1px solid #CDE5D4;border-radius:6px;margin-bottom:8px}
+.ix-mapnote{font-size:13.5px;color:#4B5563;margin:0 0 30px}
+
+</style>
+<meta name="description" content="How Hope of Utah, Sistema Utah, a State School Board seat and the RatedBooks.org book lists connect, from state grant records, budget records, corporation filings, tax returns and campaign records.">
+<style>
+.hb-tagline{font-family:Georgia,serif;font-style:italic;color:#d9c9a3;font-size:12.5px;max-width:1100px;margin:6px auto 0}
+.hs-where{display:grid;gap:10px;margin:0 0 24px}
+.hs-where div{background:#fff;border:1px solid #CDE5D4;border-left:6px solid #14532D;padding:12px 16px;font-size:15.5px}
+.hs-where b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#14532D;margin-bottom:4px}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid #CDE5D4;font-size:15.5px;min-width:560px}
+.tbl th{background:#14532D;color:#fff;text-align:left;padding:10px}
+.tbl td{padding:10px;border-top:1px solid #CDE5D4;vertical-align:top}
+.gb{display:inline-block;min-width:34px;text-align:center;font-weight:700;padding:2px 8px;border-radius:4px;border:2px solid}
+.gA,.gB{background:#15803D;color:#fff;border-color:#15803D}.gC{background:#FEF9C3;color:#1F2937;border-color:#CA8A04}.gD,.gF{background:#B91C1C;color:#fff;border-color:#B91C1C}.gN{background:#fff;color:#4B5563;border-color:#CDE5D4}
+.note-box{background:#FFFBEB;border:1px solid #FCD34D;border-left:6px solid #CA8A04;padding:14px 18px;font-size:15.5px;margin:16px 0}
+.mermaid{background:#fff;border:1px solid #CDE5D4;padding:14px;margin:12px 0}
+.tipbar{max-width:820px;margin:26px auto 0;padding:16px 24px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;border-top:1px solid #CDE5D4}
+.tipbar a{display:inline-block;padding:10px 16px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px}
+.tipbar .t1{background:#14532D;color:#fff}.tipbar .t2{border:2px solid #14532D;color:#14532D}.tipbar .t3{border:2px solid #B91C1C;color:#B91C1C}
+.tipbar small{width:100%;text-align:center;color:#4B5563}
+.sharebar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.sharebar button,.sharebar a{font:inherit;font-size:14px;padding:7px 12px;border:1px solid #CDE5D4;background:#fff;color:#1F2937;border-radius:999px;text-decoration:none;cursor:pointer}
+.topbtn{position:fixed;right:16px;bottom:16px;background:#14532D;color:#fff;border:0;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:50}
+.hbx-top{margin:0}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;display:block;margin-top:2px}
+.hb-line-top{font-family:Georgia,serif;color:#e8d9b5;font-size:12.5px;display:block;margin-top:3px;line-height:1.4}
+.hbx-slim{background:#0e2438;color:#dbe7f0;font:600 14px/1.4 Arial,sans-serif;padding:7px 20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hbx-slim a{color:#F3E3B3;text-decoration:underline}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;line-height:1.5}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px}
+.hb-foot .hb-name,.hb-foot .hb-sub{display:block}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a!important;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none!important}
+.hb-btn2{background:transparent;color:#d4af37!important}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+.hb-small a{color:#d4af37;text-decoration:underline}
+.hb-foot p{max-width:720px;margin-left:auto!important;margin-right:auto!important}
+.hbx-tools{max-width:980px;margin:14px auto 4px;padding:0 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;font-family:Arial,sans-serif;position:relative;z-index:2}
+.hbx-tool{display:inline-block;font:700 15px Arial,sans-serif;color:#13233F!important;background:#fff;border:1px solid #c8cfd6;border-radius:6px;padding:9px 13px;text-decoration:none!important;cursor:pointer;line-height:1.2}
+.hbx-tool:hover{border-color:#13233F}.hbx-cnchip b{color:#1f5f9e;font-family:ui-monospace,Menlo,monospace}
+.hbx-jump{flex-basis:100%;order:5;border:1px solid #c8cfd6;border-radius:6px;background:#fff;color:#13233F}.hbx-jump summary{cursor:pointer;padding:9px 13px;font:700 15px Arial,sans-serif}
+.hbx-jump ol{margin:0;padding:4px 16px 12px 36px}.hbx-jump li{margin:6px 0;font-size:16.5px}.hbx-jump a{color:#13233F}
+.hbx-shelfwrap{background:#0e2438;color:#dbe7f0;padding:26px 20px 30px;font:16px/1.5 Arial,sans-serif;margin-top:48px;position:relative;z-index:1}
+.hbx-shelfwrap .in{max-width:900px;margin:0 auto}
+.hbx-shelf{border:2px dashed #9fd0ee;border-radius:10px;padding:16px 18px}
+.hbx-cn-big{font:600 17px ui-monospace,Menlo,monospace;margin-bottom:12px;color:#fff}.hbx-cn-big b{color:#9fd0ee}
+.hbx-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.hbx-nav-btn{flex:1;min-width:220px;background:#12304a;border:1px solid #4d86ad;border-radius:8px;padding:12px 14px;color:#fff!important;text-decoration:none!important;font-size:16px}.hbx-nav-btn b{color:#9fd0ee;font-family:ui-monospace,Menlo,monospace}.hbx-off{opacity:.5}
+.hbx-list summary{cursor:pointer;font-weight:700;padding:6px 0}.hbx-list ol{list-style:none;margin:6px 0 0;padding:0}.hbx-list li{padding:6px 0;border-bottom:1px solid #2b4a63}.hbx-list a{color:#fff!important;text-decoration:none}
+.hbx-shelf-head{color:#9fd0ee;font:600 13px ui-monospace,Menlo,monospace;letter-spacing:.1em}.hbx-cn{font-family:ui-monospace,Menlo,monospace;color:#9fd0ee;margin-right:6px}
+.hbx-find{margin:14px 0 4px}.hbx-find label{display:block;font-weight:700;margin-bottom:6px}.hbx-find div{display:flex;gap:8px;flex-wrap:wrap}.hbx-find input{flex:1;min-width:0;width:100%;padding:12px 14px;font-size:17px;border:2px solid #4d86ad;border-radius:6px;color:#13233F;background:#fff}.hbx-find button{padding:12px 18px;font-size:16px;font-weight:700;background:#9fd0ee;color:#0e2438;border:0;border-radius:6px;cursor:pointer}
+.hbx-search{font-size:15px;margin-top:12px}.hbx-search a,.hbx-search b{color:#9fd0ee}
+.hbx-totop{display:none;position:fixed;right:16px;bottom:16px;z-index:50;background:#0e2438;color:#fff!important;border:2px solid #9fd0ee;border-radius:24px;padding:10px 16px;font:700 15px Arial,sans-serif;text-decoration:none!important;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.hbx-dates{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+@media(max-width:600px){.hb-bar img{width:38px;height:38px}.hb-line-top{font-size:11.5px}}
+.hbx-shelfwrap+.hb-foot{margin-top:0}
+@media print{.hbx-tools,.hbx-totop{display:none}}
+/* Text sizes matched to the other Hive repos (Nov. 2, 2026): 19px reading text */
+main p:not(.ix-hint):not(.hs-date),main li,main .more,main .note-box,main .callout,main .hs-corr,main .newhere p,main .ix-panel p,main .hs-upd li,main .more{font-size:19px!important;line-height:1.62}
+main .hs-qa div,main td,main .fd,main .def,main .flip-card-back .def,main .hs-where div{font-size:17px!important;line-height:1.55}
+main .ix-hint,main small,main .s a{font-size:15px}
+.hb-foot .hb-name{font-size:16px}
+.hbx-tools{margin-bottom:14px}
+footer+.hb-foot,.hbx-shelfwrap+footer,.hbx-shelfwrap+.tipbar{margin-top:0}
+.hbx-totop{display:none!important}
+</style>
+</head>
+<body>
+<div class="hbx-top"><div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="hbx-slim"><span>Education · ED 100.06</span><span><a href="index.html">← Education docket</a> · <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">← Hive library (every repo)</a></span></div></div>
+<div class="breadcrumb"><a href="index.html">&larr; Education docket</a></div>
+<header class="band"><div class="band-inner">
+<div class="eyebrow">Connections &mdash; Statewide &middot; State grants, nonprofits, school board</div>
+<h1>Who Connects to Whom: Hope of Utah, Sistema Utah and the Book Lists</h1>
+<p class="dek">One state grant line, two nonprofits, a State School Board seat and a book-rating website. Each line on this page is tied to a public record. The records show people in common. They do not show anyone coordinating.</p>
+<p class="hs-date">Posted Nov. 2, 2026</p>
+</div></header>
+<main>
+
+<div class="hs-short" id="short"><b class="h">Short version</b><ul>
+<li><b>One grant line, two networks:</b> in the 2025–26 budget year, the Legislature paid direct grants through the Department of Cultural and Community Engagement’s Arts &amp; Museums line to <b>Hope of Utah</b> ($150,000) and to Sistema Utah’s <b>“Youth Arts Access for Utah’s Future”</b> ($100,000) (<a href="https://le.utah.gov/interim/2026/pdf/00002064.pdf" target="_blank" rel="noopener">budget motions, Mar. 5, 2026</a>; <a href="https://le.utah.gov/interim/2025/pdf/00001197.pdf" target="_blank" rel="noopener">Sistema request</a>).</li>
+<li><b>Who runs them:</b> Hope of Utah’s directors are Ron Williams (chair), Jamie Renda and Al Jackson (vice chairs) (<a href="https://projects.propublica.org/nonprofits/organizations/331592354" target="_blank" rel="noopener">2025 IRS Form 990-EZ</a>). Sistema Utah’s trustees are Carolyn Sharette, David Sharette and Catherine Findlay (its IRS Form 990-EZ and Utah corporation filing). Carolyn Sharette leads American Preparatory Schools, a charter school management company.</li>
+<li><b>Filed as education, paid as arts:</b> Hope of Utah’s funding request form was filed under “Public Education,” directed to the State School Board. The Legislature heard it in its Economic and Community Development budget committee on Feb. 7, 2025, and paid it from the Arts &amp; Museums “Pass Through Grants” line (<a href="https://le.utah.gov/interim/2025/pdf/00001383.pdf" target="_blank" rel="noopener">Hope request</a>; <a href="https://cobi.utah.gov/2025/1/issues/23854" target="_blank" rel="noopener">state budget record H.A.R. 143</a>).</li>
+<li><b>Now every year:</b> in 2026 Rep. Lisonbee asked again, and the Legislature gave Hope of Utah <b>$187,000 a year, ongoing</b>, starting July 2026 (<a href="https://cobi.utah.gov/2026/1/issues/25336" target="_blank" rel="noopener">state budget record H.A.R. 49</a>; H.B. 3, 2026, Item 210).</li>
+<li><b>People in common:</b> State School Board Member Joseph Kerry is listed as Hope of Utah’s “Former Co-Founder,” and Carolyn Sharette gave to his campaigns in 2024, 2025 and 2026. Cari Bartholomew sits on Hope of Utah’s advisory board and got 2024 campaign money from both Sharette and Brooke Stephens. Rep. Karianne Lisonbee asked for Hope’s grant and gave to Kerry’s campaign.</li>
+<li><b>The book link:</b> Hope of Utah’s own affiliates page lists “Rate My Books” (ratedbooks.org), the book-rating site run by Brooke Stephens. Kerry voted for Board Member Emily Green’s library review addendum and co-moved her Aug. 4 memo. See <a href="weber-hive-book-removal-process.html">How a Book Gets Pulled From Every Utah School</a>.</li>
+<li><b>Still unknown:</b> who received Hope of Utah’s $85,659.37 in pass-through money. Its state report does not name them.</li>
+</ul></div>
+
+<div class="hs-where"><div><b>Where</b>Ogden (Hope of Utah, Path Forward Utah and Path For Utah share an office on Grant Avenue) · Draper (Sistema Utah, American Preparatory Schools) · Davis County (RatedBooks.org) · statewide (State School Board, Legislature)</div><div><b>Who</b>Hope of Utah (Jamie Renda, Ron Williams, Al Jackson) · Joseph Kerry (State School Board, District 2; resigned Sept. 2026) · Cari Bartholomew · Carolyn Sharette (American Preparatory Schools; Sistema Utah) · Brooke Stephens (RatedBooks.org) · Gloria Vindas · Rep. Karianne Lisonbee · Sen. Kirk Cullimore</div></div>
+
+<nav class="hs-toc" aria-label="On this page"><b>On this page</b><a href="#map">The map</a><a href="#grant">The grant line</a><a href="#hope">Hope of Utah’s money</a><a href="#affiliates">The 19 affiliates</a><a href="#people">People in common</a><a href="#books">The book link</a><a href="#bills">Bills</a><a href="#notshow">What the records don’t show</a><a href="#notconfirmed">Not confirmed</a><a href="#whom">Questions to ask</a><a href="#connected">Connected Hive work</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav>
+
+<section class="hs-sec" id="map"><h2>The map, in three parts</h2>
+<p class="ix-hint">Each arrow is labeled with the record it comes from. An arrow means “a record shows this.” It does not mean one person directed another.</p>
+<p><b>1. The money: one state grant line</b></p>
+<div class="mermaid">
+flowchart TD
+  L["Legislature, 2025 budget<br/>Arts & Museums grants line"]
+  L -->|"$150,000<br/>asked by Rep. Lisonbee"| H["Hope of Utah<br/>Ogden"]
+  L -->|"$100,000<br/>asked by Sen. Cullimore"| S["Sistema Utah<br/>Youth Arts Access"]
+  H --- HD["Directors: Ron Williams,<br/>Jamie Renda, Al Jackson"]
+  S --- SD["Trustees: Carolyn Sharette,<br/>David Sharette, Catherine Findlay"]
+</div>
+<p><b>2. The people: who appears on both sides</b></p>
+<div class="mermaid">
+flowchart TD
+  CS["Carolyn Sharette"] -->|"campaign gifts<br/>2024, 2025, 2026"| K["Joseph Kerry<br/>State School Board"]
+  CS -->|"$520.87, 2024"| B["Cari Bartholomew"]
+  K -->|"listed as<br/>Former Co-Founder"| H["Hope of Utah"]
+  B -->|"advisory board"| H
+  KL["Rep. Karianne Lisonbee"] -->|"$245.15 to his campaign"| K
+  KL -->|"asked for its grant"| H
+</div>
+<p><b>3. The book link</b></p>
+<div class="mermaid">
+flowchart TD
+  H["Hope of Utah"] -->|"lists as an affiliate"| R["Rate My Books<br/>ratedbooks.org"]
+  BS["Brooke Stephens<br/>runs RatedBooks"] --- R
+  BS -->|"$25, 2024"| B["Cari Bartholomew"]
+  GV["Gloria Vindas"] -->|"co-wrote 2024<br/>RatedBooks letter"| BS
+  K["Joseph Kerry"] -->|"voted yes, Aug. 6, 2026"| G["Emily Green’s<br/>library addendum"]
+</div>
+</section>
+
+<section class="hs-sec" id="grant"><h2>The grant line: who else was paid from it</h2>
+<p>The Legislature puts some grants straight into an agency’s budget for one named group. These are called direct awards. In the 2025–26 budget year, the Arts &amp; Museums grants line carried five named groups.</p>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Group</th><th>Award</th><th>Who asked</th><th>Filed under</th><th>Who runs it</th></tr></thead><tbody>
+<tr><td>Latinos in Action</td><td>$250,000</td><td>Not found yet</td><td>Not found yet</td><td>Founder Jose Enriquez</td></tr>
+<tr><td><b>Hope of Utah</b></td><td>$150,000</td><td>Rep. Karianne Lisonbee</td><td><b>Public Education</b> (State School Board)</td><td>Ron Williams, Jamie Renda, Al Jackson</td></tr>
+<tr><td><b>Youth Arts Access for Utah’s Future</b> (Sistema Utah)</td><td>$100,000 (asked $250,000)</td><td>Sen. Kirk Cullimore</td><td>Arts; Education and Research</td><td>Trustees Carolyn Sharette, David Sharette, Catherine Findlay; request contact Trina Christensen, co-director</td></tr>
+<tr><td>Sevier County Archives and Heritage Space</td><td>$50,000 (asked $75,000)</td><td>Sen. Carl Albrecht</td><td>Arts</td><td>Director Elaine Wayland</td></tr>
+<tr><td>Syracuse Museum Foundation</td><td>$50,000 (asked $100,000)</td><td>Rep. Karianne Lisonbee</td><td>Education and Research; Tourism</td><td>President Terry Palmer</td></tr>
+</tbody></table></div>
+<p class="ix-hint">Sources: each group’s funding request on le.utah.gov; S.B. 3 (2025), Item 184; Executive Appropriations Committee motions, Mar. 5, 2026. Amounts for Sevier and Syracuse are from the Mar. 5, 2026 list.</p>
+<div class="note-box"><b>What the requests show:</b> Hope of Utah’s was the only request of the five that asked for ongoing, every-year money: $250,000 a year, all for “personnel services.” It was filed as public education money and paid from the arts line. Sistema Utah asked for $250,000, with $225,000 of it for salaries. Its 2024 tax return shows $24,791 in revenue for the whole year, so the $100,000 award is about four times that. The state’s payment register shows <b>$90,000</b> paid to Sistema Utah in the 2025–26 year. It also shows Salt Lake County paying Sistema Utah every year since 2018 ($1,500 in 2018, rising to $13,460 in 2025), and American Preparatory Academy paying El Sistema USA $500 a year in 2014–2018 (Transparent Utah).</div>
+</section>
+
+<section class="hs-sec" id="hope"><h2>Hope of Utah’s money, by date</h2>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Date</th><th>What happened</th><th>Record</th></tr></thead><tbody>
+<tr><td>Jan. 31, 2025</td><td>Rep. Lisonbee files the request: $58,000 one-time plus $250,000 a year ongoing. Ron Williams, listed as “Founder,” is Hope’s contact.</td><td>Request for Appropriation</td></tr>
+<tr><td>Feb. 7, 2025</td><td>The request is heard in the Economic and Community Development Appropriations Subcommittee. The final budget funds $150,000 one-time and $0 ongoing, through “Arts &amp; Museums Grants » Pass Through Grants.”</td><td>State budget record H.A.R. 143; S.B. 3 (2025), Item 184</td></tr>
+<tr><td>July 30, 2025</td><td>State contract #260268 signed. Jamie D. Renda signs as “Co-Founder.” Purpose: “FY26 Legislative Appropriated Funds.”</td><td>Grant contract</td></tr>
+<tr><td>Aug. 1, 2025</td><td>Payment request for <b>$135,000</b>, approved Aug. 4. The form notes the group would like to pick up the check in person.</td><td>Payment request #1</td></tr>
+<tr><td>2025–26 budget year</td><td>The state’s payment register shows <b>$135,000</b> paid to Hope of Utah for the year. It shows no other payment to Hope.</td><td>Transparent Utah, read Nov. 2, 2026</td></tr>
+<tr><td>Feb. 2, 2026</td><td>Rep. Lisonbee’s new request, “Local Community and Non-profit Empowerment” (H.A.R. 49), asks $187,000 a year ongoing for Hope of Utah, using the same description as 2025. Heard in the Economic and Community Development Appropriations Subcommittee.</td><td>State budget record H.A.R. 49</td></tr>
+<tr><td>Mar. 5, 2026</td><td>Legislators let up to $125,000 of the grant stay available after June 30, 2026. Every group on the line got the same carry-over wording.</td><td>Budget motions</td></tr>
+<tr><td>June 13, 2026</td><td>Spending report signed by Renda and Williams (the final report was due June 1). It lists $47,210 personnel services; $85,659.37 pass-through; $2,539.80 out-of-state travel, “Travel to DC Woodson Center”; $4,577.98 rent, internet and advertising; $547.21 in-state travel; $9,606.50 other.</td><td>Spending report</td></tr>
+<tr><td>June 16, 2026</td><td>Payment request for the last <b>$15,000</b>.</td><td>Payment request #2</td></tr>
+<tr><td>March 2026</td><td>The 2026 budget bill funds it: a “direct award grant of $187,000” to Hope of Utah, <b>ongoing</b>, “for empowering local community leaders and nonprofits,” in the department’s Administration line. The state’s budget record lists it as $187,000 ongoing, $0 one-time.</td><td>H.B. 3 (2026), Item 210; state budget record H.A.R. 49</td></tr>
+<tr><td>Oct. 28, 2026</td><td>Asked who received the personnel and pass-through money, the department replied that its records had already been provided.</td><td>Department email</td></tr>
+</tbody></table></div>
+<p class="ix-hint">Grant, payment and report records came to the Hive from a records request; a tip came in. The dates on payment forms are request and approval dates, not proof of when a check was cut.</p>
+<div class="note-box"><b>Numbers that don’t line up:</b> the spending report prints a total of $150,140.65, which is more than the $150,000 award, and its own lines add to $150,140.86. The final report says $135,000 was received to date and $150,000 was used. It says the money helped “20+ non-profits” and names none of them. Hope’s 2025 tax return lists $48,050 in grants to unnamed “partner organizations.”</div>
+<div class="note-box"><b>What the contract says about passing money on:</b> Section 18 bars any “subcontract or sublet… without the prior written approval of the State.” Hope’s plan says it gives small grants to other nonprofits. No written approval is in the records we have. That doesn’t mean none exists.</div>
+</section>
+
+<section class="hs-sec" id="affiliates"><h2>The “20+ non-profits”: Hope of Utah’s 19 listed affiliates</h2>
+<p>Hope of Utah’s final report to the state says, “We were able to help 20+ non-profits.” It names none. Its spending report lists $85,659.37 in pass-through money and names no recipients. Its 2025 tax return lists $48,050 in grants to “partner organizations” and names none. Asked who received the money, the state department said its records had already been provided.</p>
+<p>Hope of Utah’s own website lists 19 affiliates, plus one marked “coming soon” (<a href="https://hopeofutah.org/affiliates/" target="_blank" rel="noopener">hopeofutah.org/affiliates</a>, read Nov. 2, 2026). We searched every one in the Utah Division of Corporations business registry on Nov. 2, 2026.</p>
+<div class="note-box"><b>What the state registry shows:</b> <b>Hope of Utah itself is the registered agent</b> for six of its affiliates, all formed as Utah nonprofit corporations between June 2025 and February 2026, during the grant year. Its office, 2351 Grant Ave., Suite 102, Ogden, is their agent address. Jamie Renda is the registered agent for a seventh. Hope of Utah’s chair, Ron Williams, is listed as the incorporator and chairman of an eighth, under the name Ronald Williams. Hope of Utah’s funding request said it would help nonprofits with “nonprofit filings” and “government paperwork.”</div>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Affiliate</th><th>What it says it does</th><th>Utah registry (formed · agent · leaders)</th><th>Other ties to Hope’s circle</th></tr></thead><tbody>
+<tr><td>1</td><td>Youth For Liberty</td><td>“Empower young Americans to defend liberty, individual rights, and limited government”; speaks at schools about communism</td><td>Nonprofit #14581402-0140, formed June 10, 2025. <b>Registered agent: Hope of Utah.</b> Directors Gabriela Puckett (Cedar Hills), Andres Lopez Yero and Arturo Lopez Yero (South Jordan). Mailing address in Florida.</td><td>Puckett calls it “her own nonprofit” (Dissident Project speaker bio)</td></tr>
+<tr><td>2</td><td>Urban Student Alliance</td><td>Teen leadership club at Ben Lomond High</td><td>Nonprofit #14584380-0140, formed June 18, 2025. <b>Registered agent: Hope of Utah.</b> Directors Delores Green, Rene Douglas and <b>Marcus Carr</b> (Ogden).</td><td>Marcus Carr is on Hope of Utah’s and Path Forward Utah’s advisory boards. Cari Bartholomew presented at its 2025 and 2026 programs. IRS lists EIN 39-2758760 with $0 in gross receipts.</td></tr>
+<tr><td>3</td><td>Future Star Athletes</td><td>Football, mentoring, role models</td><td>Nonprofit #14586609-0140, formed June 25, 2025. <b>Registered agent: Hope of Utah.</b> Directors Travon Harvey, Cynthia McIntosh (Roy) and Keisha Green (Ogden).</td><td>&mdash;</td></tr>
+<tr><td>4</td><td>Healthy Mind Happy Heart</td><td>Family mental health and “emotional resilience”</td><td>Nonprofit #14632485-0140, formed Nov. 20, 2025. <b>Registered agent: Hope of Utah.</b> Directors Silvana Romay, Vanessa Preiero and Jorge Araujo (Herriman).</td><td>A Florida nonprofit uses the same website (not confirmed to be the same group)</td></tr>
+<tr><td>5</td><td>Cineverse Foundation</td><td>Trains youth in art and film</td><td>Nonprofit #14655912-0140, formed Jan. 29, 2026. <b>Registered agent: Hope of Utah.</b> Directors Luis Rivero and Luis Benitez; incorporator Eduard Dominguez (Salt Lake City).</td><td>IRS EIN 37-2219036, ruling March 2026</td></tr>
+<tr><td>6</td><td>Vibe and Rise Again</td><td>Open mics, shoe drives, “a space where people can come without judgment”</td><td>Nonprofit #14661949-0140, formed Feb. 15, 2026. <b>Registered agent: Hope of Utah.</b></td><td>Founders listed on Hope’s page as Sam and Mason Klick</td></tr>
+<tr><td>7</td><td>Hope Connecting Purpose</td><td>“Bring hope, confidence, and purpose to our youth” facing health crises</td><td>Nonprofit #14569385-0140, formed Apr. 29, 2025. <b>Registered agent: Jamie Renda</b>, at 2351 Grant Ave. Ste 102. President Murray Latson (Harrisville).</td><td>&mdash;</td></tr>
+<tr><td>8</td><td>RW Champion Foundation</td><td>“Champion Transformation Program” to “overcome trauma, destructive patterns, and limiting beliefs”</td><td>Nonprofit #14553087-0140, formed Mar. 7, 2025. <b>Incorporator and chairman of the board: Ronald Williams</b> (Draper). Director Steve Cutler (Sandy). Registered agent Tonja Williams (Draper).</td><td>Hope of Utah’s chair is Ron Williams, who sells coaching as “Champion Life by Ron Williams.” The foundation was formed five weeks after he was named Hope of Utah’s contact on its Jan. 31, 2025 funding request.</td></tr>
+<tr><td>9</td><td>The Valley 7s</td><td>Youth football plus community service</td><td>Nonprofit #14544735-0140, formed Feb. 12, 2025 (converted from an LLC of the same name)</td><td>&mdash;</td></tr>
+<tr><td>10</td><td>WAMsafety</td><td>Safety tips and true crime; seeks a national three-digit number for reporting abuse and trafficking</td><td>Nonprofit #14582979-0140, formed June 16, 2025. Agent and chair Wendy Jensen-Nicholls; director Jason Nicholls (Perry).</td><td>Hope lists its contact under a different email name. WAMsafety led outreach for 2026 H.B. 411 (trafficking hotline), which the Association of Ministers of Utah also backed (Deseret News, Oct. 21, 2026).</td></tr>
+<tr><td>11</td><td><b>Rate My Books</b> (ratedbooks.org)</td><td>Rates books “so that parents and schools may choose wisely”</td><td>RatedBooks.org, nonprofit #14574510-0140, formed May 16, 2025. President <b>Brooke Stephens</b> (Layton).</td><td>State auditors used a list from ratedbooks.org in their 2025 removed-books audit. See <a href="weber-hive-book-removal-process.html#moved">How one book list moved</a>.</td></tr>
+<tr><td>12</td><td>Empower Parents Utah</td><td>“We empower parents to determine the best school option for their child”</td><td>Name closest in the registry: Empowered Parents, nonprofit #9699080-0140, formed 2016. Its office suite and two directors match those of Utah Parents United (state records). <b>Not confirmed</b> that this is the group Hope lists.</td><td>Utah Parents United is the group Brooke Stephens was tied to in 2022–2024 news reports.</td></tr>
+<tr><td>13</td><td>Four1&amp;All</td><td>Ogden family service: skate nights, free family photos, youth events “where they can meet leaders like Senator Mike Kennedy”</td><td>Only match: Four1&amp;All, LLC, formed Oct. 14, 2020, administratively dissolved. No nonprofit corporation found.</td><td>Leaders Lorenzo Gutierrez, Antwain Harvey, Andre Garcia. Its 2023 donations were dropped off at <b>Path Forward Utah’s office, 2351 Grant Ave., Suite 102</b> (Standard-Examiner, Aug. 4, 2023). Its site shows a “Path Forward” sponsor logo. The Hive reported earlier that Gutierrez spoke for Hope’s funding request in 2025.</td></tr>
+<tr><td>14</td><td>Living &amp; Aging with Pride</td><td>Program on aging</td><td>Living and Aging with Pride LLC, formed Dec. 26, 2019, plus a “.org” assumed name (2020)</td><td>IRS EIN 84-4910413 (Salt Lake City); founder James Brown; revenue $60,578 (2023), $21,547 (2024)</td></tr>
+<tr><td>15</td><td>About Life Academy</td><td>Farm, water and technology education</td><td>Only a name reservation, “About Life Acadmey” (spelled that way), July 16, 2026. No corporation.</td><td>Works with Growing Unified Development, the group founded by Marcus Carr</td></tr>
+<tr><td>16</td><td>Association of Ministers of Utah</td><td>“Coming soon”</td><td>No Utah registration found</td><td>KSL (May 3, 2026) says the group is affiliated with Hope of Utah and that Jamie Renda pushed to create it. It launched at the Capitol with Attorney General Derek Brown speaking and Rep. Karianne Lisonbee attending. It says it raised about $40,000; the article does not say from whom.</td></tr>
+<tr><td>17</td><td>Mustard Seed Faith Ministries Food Pantry</td><td>Ogden food pantry</td><td>No Utah registration found</td><td>Pastor Juan Péna (Deseret News, Dec. 18, 2019)</td></tr>
+<tr><td>18</td><td>United Storytellers</td><td>“Coming soon”</td><td>No Utah registration found</td><td>&mdash;</td></tr>
+<tr><td>19</td><td>Latino Hope</td><td>No description</td><td>No Utah registration found</td><td>&mdash;</td></tr>
+</tbody></table></div>
+<div class="note-box"><b>Earlier versions of Hope’s site (Internet Archive):</b> the oldest saved copy, Jan. 23, 2025, eight days before the funding request, gives Hope’s mission as empowering “community leaders and nonprofits who embrace American principles and apply Godly-moral values,” and lists a Thanksgiving meal pickup at “Path Forward Utah’s Office.” Its “Our Partners” logos were not saved. The first saved copy of the affiliates page, Aug. 2, 2026, lists 18 of today’s 19; About Life Academy was added after that. On Aug. 2, 2026, RW Champion Foundation was described as empowering “youth through sports and education”; it now describes a trauma program.</div>
+<div class="note-box"><b>Counting it up:</b> 11 of the 19 became Utah nonprofit corporations in 2025 or 2026. Hope of Utah is the registered agent for 6 of them, Renda for a 7th, and Hope’s chair founded an 8th. Four have no Utah registration under these names. No record we found shows how much grant money, if any, any of the 19 received. “No Utah registration found” means none under that name in a search on Nov. 2, 2026.</div>
+</section>
+
+<section class="hs-sec" id="people"><h2>People in common</h2>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Person</th><th>Hope of Utah / Renda side</th><th>Sharette / book side</th><th>Records</th></tr></thead><tbody>
+<tr><td><b>Joseph Kerry</b></td><td>“Former Co-Founder” on Hope of Utah’s website. Listed as Path Forward Utah’s chair on its 2025 tax return, and moved to inactive on its state filing Aug. 24, 2026.</td><td>Carolyn Sharette gave $500 (2024), $522.23 (2025, later removed from his reports) and $1,261.28 (2026). Voted yes on Green’s addendum Aug. 6, 2026, and co-moved her Aug. 4 memo.</td><td>Hope website; Path Forward 990-EZ; Utah Division of Corporations; disclosures.utah.gov; USBE minutes</td></tr>
+<tr><td><b>Cari Bartholomew</b></td><td>Advisory board of Hope of Utah and Path Forward Utah</td><td>2024 State School Board race got $520.87 from Carolyn Sharette (Mar. 20, 2024) and $25 from Brooke Stephens (Apr. 2, 2024)</td><td>Both groups’ team pages; disclosures.utah.gov</td></tr>
+<tr><td><b>Rep. Karianne Lisonbee</b></td><td>Asked for Hope of Utah’s grant (and Syracuse Museum’s)</td><td>Her campaign gave Kerry $245.15. She signed the Apr. 15, 2024 legislators’ letter asking state auditors to review removed books.</td><td>Funding requests; disclosures.utah.gov; auditor’s released letter</td></tr>
+<tr><td><b>Gloria Vindas</b></td><td>Signed an Apr. 27, 2023 Deseret News opinion piece with Renda, Jaime Wadman, Bartholomew and Ron Williams (“part of Path Forward Utah”)</td><td>Co-wrote the Feb. 22, 2024 Deseret News open letter with Brooke Stephens that names RatedBooks.org</td><td>Deseret News, 2023 and 2024</td></tr>
+<tr><td><b>Trina Christensen</b></td><td>&mdash;</td><td>Sistema Utah’s contact on its grant request. Carolyn Sharette gave her two $250 contributions in Jan. 2026.</td><td>Funding request; disclosures.utah.gov</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="hs-sec" id="books"><h2>The book link</h2>
+<p>Hope of Utah’s own affiliates page lists 19 groups. One is “Rate My Books,” linked to ratedbooks.org. Utah corporation records list Brooke Stephens of Layton as the president of RatedBooks.org, a nonprofit formed May 16, 2025. State auditors used a list from ratedbooks.org in their 2025 follow-up audit of removed books. Its role in the State School Board’s library review is laid out in <a href="weber-hive-book-removal-process.html#moved">How one book list moved</a>.</p>
+<p>The 2023 opinion piece signed by Renda’s group lists a “Brooke Stevens,” Utah Parents United. The RatedBooks president’s name is spelled Stephens in news reports and state records. The two spellings have not been confirmed as the same person, so we print the 2023 name as it appeared.</p>
+<p>The affiliates page shows a listing, not money. No record we have shows Hope of Utah paying RatedBooks or any other affiliate.</p>
+</section>
+
+<section class="hs-sec" id="bills"><h2>Bills that touch these groups</h2>
+<p>These are the laws and bills that set the rules these groups work under, or that they spoke for. A vote shown here is only what the record says; blanks mean the vote was not retrieved.</p>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Bill</th><th>Primary sponsor</th><th>What it does</th><th>Ties to this page</th><th>Result</th></tr></thead><tbody>
+<tr><td>S.B. 3 (2025), Item 184</td><td>Sen. Jerry Stevenson</td><td>2025–26 budget: names Hope of Utah ($150,000) and Sistema Utah ($100,000)</td><td>Both grants on this page</td><td>Passed</td></tr>
+<tr><td>H.B. 3 (2026), Items 27 and 210</td><td>Rep. Val Peterson</td><td>Carries 2025–26 grant money forward; new $187,000 to Hope of Utah for 2026–27</td><td>Hope of Utah</td><td>Passed</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-state-grants-to-nonprofits-2024-2026.html#hb335">H.B. 335 (2024), State Grant Process</a></td><td>Rep. Val Peterson</td><td>Rules for state grants: written agreements, deliverables, no lump-sum payment, audits, money can be clawed back</td><td>The rules Hope of Utah’s grant runs under. Hope requested $135,000 of $150,000 within days of signing.</td><td>Law, July 1, 2024</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-state-grants-to-nonprofits-2024-2026.html#sb254">S.B. 254 (2025), State Grant Revisions</a></td><td>Sen. Luz Escamilla</td><td>Would have made budget language spell out payment schedule, deliverables and measures</td><td>Would have applied to direct awards like Hope’s</td><td>Died Mar. 7, 2025. Passed both houses with no no votes; the Senate pulled it back that night.</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-2026-sb312.html">S.B. 312 (2026), Educator License (UPPAC)</a></td><td>Sen. John Johnson</td><td>Limits discipline on suspended educators to serious misconduct unless the board makes written findings</td><td>Educator-licensing reform is a Path Forward Utah issue; news quotes Renda supporting it. Lisonbee sponsored the House version and voted yes in committee and on the floor; Cullimore voted yes on the 15–14 Senate vote.</td><td>Signed Mar. 26, 2026</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-2026-hb31.html">H.B. 31 (2026), LEA Financial Reporting</a></td><td>Rep. Neil Walter</td><td>Would have kept pay made by a school’s contractor to its own employees out of public financial reporting</td><td>News tied it to the State Auditor’s court fight to get pay records from American Preparatory Schools (Sharette). Its sponsor said it came from an Alpine School District audit.</td><td>Failed</td></tr>
+<tr><td>H.B. 215 (2023), Utah Fits All scholarships</td><td>Rep. Candice Pierucci; Senate sponsor Sen. Kirk Cullimore</td><td>Creates the private-school scholarship program</td><td>School choice; Cullimore also requested Sistema Utah’s grant. Lisonbee, Cullimore and Ivory voted yes.</td><td>Signed</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-school-book-laws-2022-2026.html#hb29">H.B. 29 (2024)</a></td><td>Rep. Ken Ivory</td><td>A book removed by three districts comes out of every school</td><td>Brooke Stephens spoke for it. Lisonbee, Cullimore and Ivory voted yes.</td><td>Signed</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-school-book-laws-2022-2026.html#hb197">H.B. 197 (2026)</a></td><td>Rep. Nicholeen Peck</td><td>Vendor and pre-review rules for school materials</td><td>Utah Parents United spoke for it. <b>Lisonbee made both committee motions and voted yes.</b></td><td>Did not pass</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-school-book-laws-2022-2026.html#hb473">H.B. 473 (2025)</a></td><td>Rep. Nicholeen Peck</td><td>Digital school materials</td><td>Brooke Stephens spoke for it (listed as Utah Moms for America). Lisonbee is recorded abstaining on all three committee motions.</td><td>Died</td></tr>
+<tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-2024-hb261.html">H.B. 261 (2024), DEI</a></td><td>Rep. Katy Hall</td><td>Bans DEI offices and DEI statements at public schools and colleges</td><td>The 2023 opinion piece signed by Renda’s group backed the earlier version, H.B. 451 (2023), which failed. Lisonbee, Ivory and Cullimore voted yes on H.B. 261.</td><td>Signed</td></tr>
+<tr><td>S.B. 145 (2026), Lobbying</td><td>Sen. Brady Brammer</td><td>Defines lobbying to include trying to influence State School Board decisions</td><td>Groups that bring legislators and board members together</td><td>Signed Mar. 17, 2026</td></tr>
+</tbody></table></div>
+<p class="ix-hint">Sources: le.utah.gov bill texts, status pages and committee minutes; vote-tracking sites where le.utah.gov vote tables would not load. Full list with links in Sources.</p>
+</section>
+
+<section class="hs-sec" id="notshow"><h2>What the records don’t show</h2>
+<ul>
+<li>No record shows money moving between Hope of Utah and Sistema Utah, or between Renda and Sharette. Sistema Utah’s 2024 tax return shows it made no grants.</li>
+<li>Different legislators asked for the two grants. No record shows the requests were coordinated.</li>
+<li>No record shows campaign gifts changed how anyone voted.</li>
+<li>No record names who received Hope of Utah’s pass-through or personnel money.</li>
+<li>No news story we found names Jamie Renda and Carolyn Sharette together.</li>
+</ul>
+</section>
+
+<section class="hs-sec" id="notconfirmed"><h2>Not confirmed yet</h2><ul>
+<li>Whether Hope of Utah vice chair “Al Jackson” is former state Sen. Alvin B. Jackson, whose 2022 speaker bio says he sits on the Woodson Center board. The tax return gives only the name.</li>
+<li>Whether “Brooke Stevens” (2023 opinion piece) and Brooke Stephens (RatedBooks.org) are the same person.</li>
+<li>Who asked for the Latinos in Action grant, and why Hope of Utah’s request, filed under Public Education, was heard by the economic development committee and paid from the arts line.</li>
+<li>Whether the state gave written approval for Hope of Utah to pass grant money to other groups.</li>
+<li>Whether the last $15,000 was ever paid. The state’s payment register shows $135,000 for 2025–26, and Hope’s final report says $150,000 was used.</li>
+<li>Whether Hope of Utah’s other affiliates are registered Utah nonprofits.</li>
+</ul></section>
+
+<section class="hs-sec" id="whom"><h2>Questions to ask, and whom to ask</h2>
+<div class="hs-qa">
+<div><b>Department of Cultural and Community Engagement</b>Which nonprofits received Hope of Utah’s $85,659.37 in pass-through money, and did the state approve that in writing as Section 18 of the contract requires?</div>
+<div><b>Rep. Karianne Lisonbee</b>Hope of Utah’s request was filed as public education money and paid from the arts line. In 2026 you asked for $187,000 a year ongoing. What did the first $150,000 produce, and which nonprofits received it?</div>
+<div><b>Legislative Fiscal Analyst</b>Has Hope of Utah’s grant been in a funding follow-up report, and did it meet the reporting the request promised (nonprofits started, residents served)?</div>
+<div><b>State School Board</b>Do board members have to disclose a role with a nonprofit that seeks state money?</div>
+</div>
+<p class="ix-hint">Find your legislators on the <a href="https://le.utah.gov/" target="_blank" rel="noopener">Utah Legislature’s website</a> and your State School Board member on the <a href="https://schools.utah.gov/board/utah/districtsmap" target="_blank" rel="noopener">board district map</a>.</p>
+</section>
+
+<section class="hs-sec" id="connected"><h2>Connected Hive work</h2><div class="hs-cards"><a href="https://weber-county-hive.github.io/candidates2026/hd39-ivory-howells.html"><b>HD-39: Ivory vs. Howells</b><span>The H.B. 29 author’s 2026 race: campaign money, a shared vendor, and his committee record with Brooke Stephens.</span></a>
+
+<a href="weber-hive-book-removal-process.html"><b>How a Book Gets Pulled From Every Utah School</b><span>H.B. 29, the Aug. 6 board vote, RatedBooks.org and who funds the board.</span></a>
+<a href="weber-hive-book-removal-process-plain.html"><b>Book removals in plain words</b><span>The short version.</span></a>
+<a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-school-book-laws-2022-2026.html"><b>Utah’s School Book Laws, 2022–2026</b><span>Bill Tracker: every bill and vote.</span></a>
+</div></section>
+
+<section class="hs-sec" id="behind"><h2>Behind this piece</h2><div class="hs-counter"><div><div class="n">5</div><div class="l">Grants compared</div></div><div><div class="n">5</div><div class="l">Funding requests read</div></div><div><div class="n">23</div><div class="l">Pages of grant records</div></div><div><div class="n">5</div><div class="l">People traced</div></div><div><div class="n">19</div><div class="l">Affiliates searched in state records</div></div><div><div class="n">12</div><div class="l">Bills reviewed</div></div></div><p class="hs-note2">Posted Nov. 2, 2026. Public records and news reports only; no comment was requested from anyone. Grant records came from a tip. Cities only; no home addresses.</p></section>
+
+<section class="hs-sec" id="sources"><details class="sources-toggle" style="background:#fff;border:1px solid #CDE5D4;padding:14px 18px;"><summary style="cursor:pointer;font-weight:600;color:#166534;">Sources (tap to open)</summary><ol style="margin-top:12px;font-size:14px;color:#4B5563;">
+<li><a href="https://le.utah.gov/interim/2025/pdf/00001383.pdf" target="_blank" rel="noopener">Request for Appropriation, “Funding of Hope of Utah,” Jan. 31, 2025</a></li>
+<li><a href="https://le.utah.gov/interim/2025/pdf/00001197.pdf" target="_blank" rel="noopener">Request for Appropriation, “Youth Arts Access for Utah’s Future” (Sistema Utah)</a></li>
+<li><a href="https://le.utah.gov/interim/2025/pdf/00001188.pdf" target="_blank" rel="noopener">Request for Appropriation, Syracuse Museum Foundation</a></li>
+<li><a href="https://le.utah.gov/interim/2025/pdf/00000788.pdf" target="_blank" rel="noopener">Request for Appropriation, Sevier County Archives and Heritage Services</a></li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00002064.pdf" target="_blank" rel="noopener">Executive Appropriations Committee, Consolidated Motions for End of Session Budget Actions, Mar. 5, 2026</a></li>
+<li>S.B. 3 (2025), Item 184, Arts &amp; Museums grants (le.utah.gov)</li>
+<li><a href="https://cobi.utah.gov/2025/1/issues/23854" target="_blank" rel="noopener">State budget record (COBI), H.A.R. 143, Hope of Utah, heard Feb. 7, 2025</a></li>
+<li><a href="https://cobi.utah.gov/2026/1/issues/25336" target="_blank" rel="noopener">State budget record (COBI), H.A.R. 49, Local Community and Non-profit Empowerment, heard Feb. 2, 2026</a></li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00002063.pdf" target="_blank" rel="noopener">Executive Appropriations Committee, Additional Proposed Funding Items, Mar. 5, 2026</a></li>
+<li><a href="https://old.transparent.utah.gov/vendet.php" target="_blank" rel="noopener">Transparent Utah vendor payments: Hope of Utah, Sistema Utah (read Nov. 2, 2026)</a></li>
+<li>Internet Archive Wayback Machine: hopeofutah.org, Jan. 23, 2025; hopeofutah.org/affiliates, Aug. 2, 2026</li>
+<li>Utah Department of Cultural and Community Engagement: contract #260268, payment requests (Aug. 1, 2025; June 16, 2026), funding report (June 13, 2026), final report, and Oct. 28, 2026 email. Records request copies; a tip came in.</li>
+<li><a href="https://projects.propublica.org/nonprofits/organizations/331592354" target="_blank" rel="noopener">Hope of Utah, IRS Form 990-EZ, 2025 (ProPublica Nonprofit Explorer)</a></li>
+<li>Path Forward Utah, IRS Form 990-EZ, 2025; Sistema Utah, IRS Form 990-EZ, 2024</li>
+<li>Utah Division of Corporations: Hope of Utah (#14505669-0140), Path Forward Utah, Path For Utah (#14657396-0140), Sistema Utah (#10310583-0140), RatedBooks.org (#14574510-0140)</li>
+<li><a href="https://hopeofutah.org/affiliates" target="_blank" rel="noopener">Hope of Utah, Affiliates page</a> and team page</li>
+<li><a href="https://disclosures.utah.gov/Search/AdvancedSearch" target="_blank" rel="noopener">Utah Lieutenant Governor, campaign disclosures (Sharette, Stephens, Lisonbee contributions)</a></li>
+<li><a href="https://schools.utah.gov/board/_board_/_minutes_/2026/August62026FullBoard.pdf" target="_blank" rel="noopener">Utah State Board of Education minutes, Aug. 6, 2026</a></li>
+<li>Office of the Legislative Auditor General: Apr. 15, 2024 audit request letter (released Oct. 27, 2026)</li>
+<li>Deseret News opinion, “Why DEI oaths undermine freedom of speech,” Apr. 27, 2023</li>
+<li>Deseret News open letter by Brooke Stephens and Gloria Vindas, Feb. 22, 2024</li>
+<li><a href="https://990finder.com/264304427/" target="_blank" rel="noopener">Latinos in Action, IRS Form 990, 2023</a></li>
+<li><a href="https://le.utah.gov/Session/2026/bills/enrolled/HB0003.pdf" target="_blank" rel="noopener">H.B. 3 (2026), Appropriations Adjustments, Items 27, 210 and 212</a></li>
+<li>H.B. 335 (2024), S.B. 254 (2025), S.B. 312 (2026), H.B. 31 (2026), H.B. 215 (2023), H.B. 29 (2024), H.B. 197 (2026), H.B. 473 (2025), H.B. 261 (2024), S.B. 145 (2026): bill texts, status pages and committee minutes on le.utah.gov</li>
+<li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch" target="_blank" rel="noopener">Utah Division of Corporations business search: all 19 affiliates, and registered-agent searches for “Hope Of Utah” and “Jamie Renda,” Nov. 2, 2026</a></li>
+<li>KSL, Association of Ministers of Utah launch, May 3, 2026; Deseret News, H.B. 411 trafficking hotline, Oct. 21, 2026</li>
+</ol></details></section>
+</main>
+<div class="hbx-shelfwrap"><div class="in"><div class="hbx-shelf" id="hbx-shelf"></div></div></div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group. We report public records. You decide.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">This page states what public records and news reports say; it does not reach any legal conclusion.</p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="index.html">Education docket</a> · <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Master Index (Hive library)</a> · <a href="https://webercountyhive.substack.com/">Read on Substack</a></p></div>
+<button class="topbtn" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>try{mermaid.initialize({startOnLoad:true,theme:'base',themeVariables:{fontFamily:"Arial, sans-serif",fontSize:'22px',primaryColor:'#F0FDF4',primaryTextColor:'#14532D',primaryBorderColor:'#14532D',lineColor:'#14532D',edgeLabelBackground:'#ffffff'},flowchart:{curve:'basis',padding:18,useMaxWidth:true}});}catch(e){}</script>
+<script>document.querySelectorAll('.hs-flip').forEach(f=>f.addEventListener('click',()=>f.setAttribute('aria-expanded',f.getAttribute('aria-expanded')==='true'?'false':'true')));
+document.querySelectorAll('.ix-tl button').forEach(function(b){b.addEventListener('click',function(){var li=b.parentNode;var o=li.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});});
+var u=location.href.split('#')[0];var fb=document.getElementById('fbshare');if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(u);
+var cl=document.getElementById('copylink');if(cl)cl.onclick=async function(e){try{await navigator.clipboard.writeText(u);e.target.textContent='Link copied';}catch(x){e.target.textContent='Copy failed';}};</script>
+<script src="ed-shelf.js?v=1"></script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

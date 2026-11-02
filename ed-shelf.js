@@ -41,6 +41,11 @@ var HBX = {
       "callNumber": "ED 100.05",
       "slug": "weber-hive-book-removal-process-plain",
       "name": "Book removals, in plain words"
+    },
+    {
+      "callNumber": "ED 100.06",
+      "slug": "weber-hive-hope-sharette-connections",
+      "name": "Who Connects to Whom: Hope of Utah, Sistema Utah and the Book Lists"
     }
   ],
   "shelves": {
